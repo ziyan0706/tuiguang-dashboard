@@ -478,15 +478,69 @@
       </div>
     </div>
 
-    <!-- 增购意愿 -->
+    <!-- 增购意愿 + 满足诉求 -->
     <div class="section">
-      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 增购意愿分布</div>
-      <div class="interest-cards">
-        <div class="interest-card ic-yes"><div class="ic-value">7</div><div class="ic-label">有增购意愿</div></div>
-        <div class="interest-card ic-pending"><div class="ic-value">78</div><div class="ic-label">待定</div></div>
-        <div class="interest-card ic-no"><div class="ic-value">3</div><div class="ic-label">否</div></div>
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 增购意愿 & 客户诉求</div>
+      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 123 家商户</p>
+      <div class="two-col">
+        <!-- 增购意愿 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #e17055;">增购意愿分布</h4>
+          <table class="data-table">
+            <thead><tr><th>意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>待定</td><td class="num">78</td><td class="num"><strong>63.4%</strong></td></tr>
+              <tr><td>未填写</td><td class="num">35</td><td class="num"><strong>28.5%</strong></td></tr>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">7</td><td class="num"><strong>5.7%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">3</td><td class="num"><strong>2.4%</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="field-note" style="margin-top:8px;">暂无增购意愿（否+未填写）= 38家（30.9%）</p>
+        </div>
+        <!-- 场景满足诉求 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #e17055;">场景是否满足诉求</h4>
+          <table class="data-table">
+            <thead><tr><th>是否满足</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">40</td><td class="num"><strong>32.5%</strong></td></tr>
+              <tr><td>未填写</td><td class="num">79</td><td class="num"><strong>64.2%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">4</td><td class="num"><strong>3.3%</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="field-note" style="margin-top:8px;">明确满足诉求的40家中，7家有明确增购意愿。</p>
+        </div>
       </div>
-      <p class="field-note" style="margin-top:8px;">另有35家商户未填写。7家有明确增购意愿的商户：特步儿童、361度儿童、哥伦比亚、高仪、松赞文旅、巴拉巴拉、中和。</p>
+    </div>
+
+    <!-- 关键客户诉求 & 优化期望 -->
+    <div class="section">
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的重点客户（7家）</h4>
+        <ul>
+          <li><strong>浙江森马服饰 — 巴拉巴拉（增购=是）：</strong>1-导购线索的跟进链路需优化到更短；2-策略生成时间需优化到15s以内；3-AI文案呆板，希望更贴合导购日常语言</li>
+          <li><strong>苏州智尚信息技术 — 中和（增购=是）：</strong>月度经营报告中无法获取分销推广数据（分销员推广业绩/访客数/支付人数），希望星元可根据指令获取该部分数据</li>
+          <li><strong>高仪（上海）卫生洁具 — 高仪（增购=是）：</strong>通过AI作图优化设计效率及降低成本</li>
+          <li><strong>松赞绿谷（北京）科技 — 松赞文旅（增购=是）：</strong>通过AI作图优化设计效率及降低成本</li>
+          <li><strong>厦门市特步儿童用品 — 特步儿童（增购=是）：</strong>感兴趣场景：导购线索运营、AI试衣</li>
+          <li><strong>哥伦比亚运动服装商贸 — 哥伦比亚（增购=是）：</strong>感兴趣场景：导购线索运营、AI试衣</li>
+          <li><strong>多一度（泉州）电子商务 — 361度儿童（增购=是）：</strong>感兴趣场景：导购线索运营、作图/视频能力、AI试衣</li>
+        </ul>
+      </div>
+      <div class="summary-box" style="border-left-color: #00b894; margin-top:16px;">
+        <h4>其他有实质反馈的商户</h4>
+        <ul>
+          <li><strong>锐力体育（浙江）— 锐力体育：</strong>目前客户还在内部测试未推向终端，希望被动场景增加AI建议话术及活动商品推荐</li>
+          <li><strong>四川领跑体育用品 — 领跑体育：</strong>客户提出前期异常消耗问题，希望后续能导出消耗明细功能，用于判断消耗模块及平均值</li>
+          <li><strong>资生堂丽源化妆品 — 欧珀莱：</strong>可以在星元上创建组合商品</li>
+          <li><strong>上海逸刻新零售网络 — 逸刻EGO：</strong>希望把促销活动字段生成表格形式，通过导表AI识别帮忙生成活动</li>
+          <li><strong>美诺电器 — Miele美诺官方商城：</strong>客户是买二送一年半，刚好是赠送期没有免费星币无法测试，已引导充值29.9套餐包</li>
+          <li><strong>福建紫色花语集团 — 紫色花语：</strong>1.总店挂导购实现线索使用；2.其他场景内部先体验测试</li>
+          <li><strong>新百伦贸易（中国）— New balance：</strong>客户约8月19日线下会议，将新增购产品及AI相关操作全部讲一遍</li>
+          <li><strong>君乐宝乳业 — 悦鲜活：</strong>商户对作图和装修比较需求，探索阶段。价格敏感型，关注后续收费</li>
+        </ul>
+      </div>
     </div>
 
     <!-- 不感兴趣原因 -->
@@ -583,15 +637,62 @@
       </div>
     </div>
 
-    <!-- 增购意愿 -->
+    <!-- 增购意愿 + 满足诉求 -->
     <div class="section">
-      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 增购意愿分布</div>
-      <div class="interest-cards">
-        <div class="interest-card ic-yes"><div class="ic-value">4</div><div class="ic-label">有增购意愿</div></div>
-        <div class="interest-card ic-pending"><div class="ic-value">11</div><div class="ic-label">待定</div></div>
-        <div class="interest-card ic-no"><div class="ic-value">13</div><div class="ic-label">否</div></div>
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 增购意愿 & 客户诉求</div>
+      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 385 家商户</p>
+      <div class="two-col">
+        <!-- 增购意愿 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #00b894;">增购意愿分布</h4>
+          <table class="data-table">
+            <thead><tr><th>意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>未填写</td><td class="num">357</td><td class="num"><strong>92.7%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">13</td><td class="num"><strong>3.4%</strong></td></tr>
+              <tr><td>待定</td><td class="num">11</td><td class="num"><strong>2.9%</strong></td></tr>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">4</td><td class="num"><strong>1.0%</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="field-note" style="margin-top:8px;">暂无增购意愿（否+未填写）= 370家（96.1%），反馈率极低是核心瓶颈。</p>
+        </div>
+        <!-- 场景满足诉求 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #00b894;">场景是否满足诉求</h4>
+          <table class="data-table">
+            <thead><tr><th>是否满足</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">39</td><td class="num"><strong>10.1%</strong></td></tr>
+              <tr><td>未填写</td><td class="num">344</td><td class="num"><strong>89.4%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">2</td><td class="num"><strong>0.5%</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="field-note" style="margin-top:8px;">89.4%未填写，反馈缺口巨大。</p>
+        </div>
       </div>
-      <p class="field-note" style="margin-top:8px;">另有357家商户未填写。4家有增购意愿的商户均为祈燃科技（4个不同店铺），感兴趣场景为商品定时上下架能力+月度经营报告。</p>
+    </div>
+
+    <!-- 关键客户诉求 & 优化期望 -->
+    <div class="section">
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的商户（4家，均为祈燃科技旗下店铺）</h4>
+        <ul>
+          <li><strong>祈燃科技 — 4个店铺（Allume-Feu/xVESSEL/DEALER STREAK/未使用微商城）：</strong>均感兴趣场景：商品定时上下架能力 + 月度经营报告，场景均满足诉求</li>
+        </ul>
+      </div>
+      <div class="summary-box" style="border-left-color: #00b894; margin-top:16px;">
+        <h4>其他有实质反馈的商户</h4>
+        <ul>
+          <li><strong>中粮可口可乐饮料（北京）— 中粮可口可乐饮料：</strong>主要体验了分销及积分抵扣等场景通过星元引导配置，客户对效果满意；感兴趣faq知识库和商品定时上下架能力</li>
+          <li><strong>杭州云启嘻嘻网络科技 — 嘻嘻生活：</strong>优化期望：增加智能AI客服的自动回复能力</li>
+          <li><strong>湖南维目视嘉医疗器械 — 维目视嘉官方商城：</strong>感兴趣faq知识库、店铺装修、月度经营报告、商家文案内容素材生产，需再跟进使用情况</li>
+          <li><strong>湖南湘飘天下电子商务 — 晓莺国选：</strong>感兴趣店铺装修、作图/视频能力、faq知识库，需再协助测试需求场景是否能满足</li>
+          <li><strong>北京国家大剧院客服中心 — 国家大剧院艺术生活馆：</strong>试用后反馈，客户内部流程和推进效率不高</li>
+          <li><strong>福建省旦人投资 — 旦人养生正品店：</strong>暂无诉求（今天会议演示，引导测试使用阶段），感兴趣月度经营报告、店铺装修、作图/视频能力、faq知识库、商家文案内容素材生产</li>
+          <li><strong>香港御强 — Rogaine培健自营商城：</strong>客户反馈今日时间不便未配合测试，感兴趣商品定时上下架能力、店铺装修、faq知识库</li>
+        </ul>
+      </div>
     </div>
 
     <!-- 不感兴趣原因 -->
@@ -684,15 +785,62 @@
       </div>
     </div>
 
-    <!-- 增购意愿 -->
+    <!-- 增购意愿 + 满足诉求 -->
     <div class="section">
-      <div class="section-title general"><span class="icon">通用</span>通用运营 — 增购意愿分布</div>
-      <div class="interest-cards">
-        <div class="interest-card ic-yes"><div class="ic-value">1</div><div class="ic-label">有增购意愿</div></div>
-        <div class="interest-card ic-pending"><div class="ic-value">85</div><div class="ic-label">待定</div></div>
-        <div class="interest-card ic-no"><div class="ic-value">73</div><div class="ic-label">否</div></div>
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 增购意愿 & 客户诉求</div>
+      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 162 家商户</p>
+      <div class="two-col">
+        <!-- 增购意愿 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #6c5ce7;">增购意愿分布</h4>
+          <table class="data-table">
+            <thead><tr><th>意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>待定</td><td class="num">85</td><td class="num"><strong>52.5%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">73</td><td class="num"><strong>45.1%</strong></td></tr>
+              <tr><td>未填写</td><td class="num">3</td><td class="num"><strong>1.9%</strong></td></tr>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">1</td><td class="num"><strong>0.6%</strong></td></tr>
+            </tbody>
+          </table>
+          <p class="field-note" style="margin-top:8px;">暂无增购意愿（否+未填写）= 76家（46.9%），不感兴趣占比为三部门最高。</p>
+        </div>
+        <!-- 场景满足诉求 -->
+        <div>
+          <h4 style="font-size:15px; color:#333; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #6c5ce7;">场景是否满足诉求</h4>
+          <table class="data-table">
+            <thead><tr><th>是否满足</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge badge-yes">是</span></td><td class="num">38</td><td class="num"><strong>23.5%</strong></td></tr>
+              <tr><td>未填写</td><td class="num">120</td><td class="num"><strong>74.1%</strong></td></tr>
+              <tr><td><span class="badge badge-no">否</span></td><td class="num">4</td><td class="num"><strong>2.5%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <p class="field-note" style="margin-top:8px;">另有3家未填写。仅有1家（北京慈铭守人企业管理）有明确增购意愿，感兴趣场景为移动端经营分析。73家明确表示"不增购"，其中大量商户反馈"没时间去体验"。</p>
+    </div>
+
+    <!-- 关键客户诉求 & 优化期望 -->
+    <div class="section">
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的商户（1家）</h4>
+        <ul>
+          <li><strong>北京慈铭守人企业管理：</strong>感兴趣场景：移动端经营分析。增购意愿=是，场景满足诉求，暂无优化期望</li>
+        </ul>
+      </div>
+      <div class="summary-box" style="border-left-color: #6c5ce7; margin-top:16px;">
+        <h4>有实质诉求的商户</h4>
+        <ul>
+          <li><strong>广州普生正心堂健康药房 — 肥圆萌宠：</strong>增加指定商品分组商品应用</li>
+          <li><strong>新蛋商贸（上海）：</strong>可以根据门店来做业务对账</li>
+          <li><strong>北京畅和讯达汽车救援技术开发：</strong>根据提示需求自动修改图片上的文字内容</li>
+          <li><strong>广州安擎生物科技：</strong>能智能文案创作，根据指令进行数据分析</li>
+          <li><strong>深圳市成玩玩具有限公司：</strong>批量调整商详内容</li>
+          <li><strong>韶关市依云伴山水健康管理：</strong>智能文案创作，图文修改</li>
+          <li><strong>广州市乐龄星创娱乐文化传媒：</strong>认为应免费使用，听到后面会收费十分抵触，千万不要给他自动扣费</li>
+          <li><strong>安诚医疗服务（广州）：</strong>每月不定时需导出分销数据进行统计，已做好数据分析标签，让协助导出表格但无法实现，认为应该做到能控制系统</li>
+        </ul>
+      </div>
     </div>
 
     <!-- 不感兴趣原因 -->
