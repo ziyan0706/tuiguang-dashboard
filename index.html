@@ -321,8 +321,8 @@
     <div class="overview-card general">
       <div class="label">通用运营<br>已推广 / 覆盖率</div>
       <div class="value">161</div><span class="unit">个</span>
-      <div class="meta-line">覆盖率 <strong>100%</strong>（全部已推广）<span class="quality-warn" title="⚠ 因通用运营未提供全部客户明细，推广覆盖率错误">!</span></div>
-      <div class="card-warn-note"><span class="quality-warn" title="⚠ 因通用运营未提供全部客户明细，推广覆盖率错误">!</span>因通用运营未提供全部客户明细，故推广覆盖率统计不准确（实际覆盖率应低于显示的100%）。</div>
+      <div class="meta-line">覆盖率 <strong>提供后计算</strong>（计划推广总数待提供）<span class="quality-warn" title="⚠ 因通用运营未提供计划推广商户总数，覆盖率暂无法计算">!</span></div>
+      <div class="card-warn-note"><span class="quality-warn" title="⚠ 因通用运营未提供计划推广商户总数，覆盖率错误">!</span>通用运营未提供「计划推广商户总数」，覆盖率提供后计算；且其「不感兴趣」72家中55家实为"客户没时间体验/待反馈"等沟通进度，数据质量存疑，建议复核。</div>
     </div>
   </div>
 
@@ -400,7 +400,7 @@
     </div>
   </div>
 
-                            <!-- Tabs -->
+                              <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -497,10 +497,8 @@
               <tbody>
                 <tr><td>欧珀莱</td><td class="reason-cell">可以在星元上创建组合商品</td></tr>
                 <tr><td>逸刻EGO</td><td class="reason-cell">希望可以把促销活动的字段生成表格形式，然后通过导表的形式Ai识别帮忙生成活动</td></tr>
-                <tr><td>中和</td><td class="reason-cell">月度经营报告中无法获取分销推广数据
-如：分销员推广业绩/分销员推广带来访客数/分销员推挂钩带来访客数中有支付人数</td></tr>
-                <tr><td>紫色花语</td><td class="reason-cell">1.总店挂导购实现线索使用；
-2.其他场景内部先体验测试看看；</td></tr>
+                <tr><td>中和</td><td class="reason-cell">月度经营报告中无法获取分销推广数据 如：分销员推广业绩/分销员推广带来访客数/分销员推挂钩带来访客数中有支付人数</td></tr>
+                <tr><td>紫色花语</td><td class="reason-cell">1.总店挂导购实现线索使用； 2.其他场景内部先体验测试看看</td></tr>
               </tbody>
             </table>
           </div>
@@ -511,6 +509,7 @@
     <!-- 5. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 不感兴趣原因分析（21家）</div>
+
       <p class="field-note" style="margin-bottom:12px;"><span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span> 红圈感叹号：标记表示该处填写内容为沟通进度描述（如"暂未回复""先看看""已发送资料待反馈"等），并非商户真实的不感兴趣原因，需运营人员复核修正。</p>
       <div class="summary-box">
         <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
@@ -534,24 +533,21 @@
       <div class="cat-panels">
         <div class="cat-panel active" id="cat-行业-0">
           <ul class="merchant-list-fl">
-            <li><strong>统一美研社</strong>：已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。
-客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通。</li>
-            <li><strong>镰仓衬衫</strong>：已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。</li>
-            <li><strong>宝路易商城</strong>：已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展。</li>
-            <li><strong>邮政菜单</strong>：推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。</li>
-            <li><strong>蓝棠博步</strong>：已发送操作指南及产品说明，客户未回复，过两天再沟通问问。
-客户小程序只做展示不运营，对付费及运营相关均不感兴趣。</li>
-            <li><strong>三只小山羊</strong>：已发送操作指南及产品说明，客户未回复。
-客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营。</li>
+            <li><strong>统一美研社</strong>：已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。 客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通</li>
+            <li><strong>镰仓衬衫</strong>：已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系</li>
+            <li><strong>宝路易商城</strong>：已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展</li>
+            <li><strong>邮政菜单</strong>：推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算</li>
+            <li><strong>蓝棠博步</strong>：已发送操作指南及产品说明，客户未回复，过两天再沟通问问。 客户小程序只做展示不运营，对付费及运营相关均不感兴趣</li>
+            <li><strong>三只小山羊</strong>：已发送操作指南及产品说明，客户未回复。 客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营</li>
             <li><strong>COTEMP</strong>：基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算）</li>
           </ul>
         </div>
         <div class="cat-panel " id="cat-行业-1">
           <ul class="merchant-list-fl">
-            <li><strong>NOBIS</strong>：仅做官网展示，没有日常运营需求。</li>
-            <li><strong>歌力思男装</strong>：仅做官网展示，没有日常运营需求。</li>
-            <li><strong>LAUREL</strong>：仅做官网展示，没有日常运营需求。</li>
-            <li><strong>IRO</strong>：仅做官网展示，没有日常运营需求。</li>
+            <li><strong>NOBIS</strong>：仅做官网展示，没有日常运营需求</li>
+            <li><strong>歌力思男装</strong>：仅做官网展示，没有日常运营需求</li>
+            <li><strong>LAUREL</strong>：仅做官网展示，没有日常运营需求</li>
+            <li><strong>IRO</strong>：仅做官网展示，没有日常运营需求</li>
             <li><strong>特步儿童电商</strong>：品牌商城定位员工内购，日常基本无运营，无需求</li>
             <li><strong>帕拉丁</strong>：品牌商城定位员工内购，日常基本无运营，货品上架是第三方全平台一起上架，无需运营处理</li>
             <li><strong>K/Swiss</strong>：品牌商城定位员工内购，日常基本无运营，无需求</li>
@@ -560,14 +556,13 @@
         </div>
         <div class="cat-panel " id="cat-行业-2">
           <ul class="merchant-list-fl">
-            <li><strong>江博士</strong>：商家核心痛点目前需AI解决的问题为定时批量修改商品标题，目前星元可实现修改标题，但无法设置定时。</li>
-            <li><strong>MOMO ERA</strong>：重点说明了几个适配场景，并发送操作指南及产品说明，客户需先看，如有感兴趣点再进行演示。</li>
+            <li><strong>江博士</strong>：商家核心痛点目前需AI解决的问题为定时批量修改商品标题，目前星元可实现修改标题，但无法设置定时</li>
+            <li><strong>MOMO ERA</strong>：重点说明了几个适配场景，并发送操作指南及产品说明，客户需先看，如有感兴趣点再进行演示</li>
           </ul>
         </div>
         <div class="cat-panel " id="cat-行业-3">
           <ul class="merchant-list-fl">
-            <li><strong>LucasEmilyLouie</strong>：已发送操作指南及产品说明，回复暂时不需要。
-客户小程序只做收银开单，不做私域运营，日常对延伸付费产品不感兴趣。</li>
+            <li><strong>LucasEmilyLouie</strong>：已发送操作指南及产品说明，回复暂时不需要。 客户小程序只做收银开单，不做私域运营，日常对延伸付费产品不感兴趣</li>
           </ul>
         </div>
         <div class="cat-panel " id="cat-行业-4">
@@ -578,7 +573,7 @@
         </div>
         <div class="cat-panel " id="cat-行业-5">
           <ul class="merchant-list-fl">
-            <li><strong>Goodio歌帝</strong>：已发送操作指南及产品说明，但客户近期重点在于内部调整主体变更，暂无精力了解及研究。后续主体内部变更完可研究看看。</li>
+            <li><strong>Goodio歌帝</strong>：已发送操作指南及产品说明，但客户近期重点在于内部调整主体变更，暂无精力了解及研究。后续主体内部变更完可研究看看</li>
           </ul>
         </div>
       </div>
@@ -645,9 +640,8 @@
           <ul class="merchant-list-fl">
             <li><strong>德龙</strong>：问了报价，但是没有特别说啥，主要是代运营团队，他们采购这块品牌是不出钱的，要代运营评估这个费用价值是否合适，还在测试体验中</li>
             <li><strong>德龙</strong>：问了报价，但是没有特别说啥，主要是代运营团队，他们采购这块品牌是不出钱的，要代运营评估这个费用价值是否合适，还在测试体验中</li>
-            <li><strong>SP</strong>：没有预算，需要跟领导申请。</li>
-            <li><strong>欧珀莱</strong>：目前对接的是业务侧实际使用商城后台功能较多的角色，对于产品增购等只有提议权，暂无法判断是否可以增购。
-后续约IT以及业务部门领导会议推广。</li>
+            <li><strong>SP</strong>：没有预算，需要跟领导申请</li>
+            <li><strong>欧珀莱</strong>：目前对接的是业务侧实际使用商城后台功能较多的角色，对于产品增购等只有提议权，暂无法判断是否可以增购。 后续约IT以及业务部门领导会议推广</li>
           </ul>
         </div>
         <div class="cat-panel " id="norep-行业-1">
@@ -680,9 +674,9 @@
           <tr><td>九牧王-ZI0ZIA</td><td class="reason-cell">已约客户下周具体测试，时间待定<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>九牧王-FUN</td><td class="reason-cell">客户预约明日8/11下午4点现场介绍<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>锐力体育</td><td class="reason-cell">目前客户还在内部测试未推向终端<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
-          <tr><td>领跑体育</td><td class="reason-cell">客户星币不足，需要再测，已于周一8月10号下午2点进行星元操作介绍。客户提出针对前期异常消耗，希望后续能有导出消耗明细功能，用于判断消耗模块及平均值。<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
+          <tr><td>领跑体育</td><td class="reason-cell">客户星币不足，需要再测，已于周一8月10号下午2点进行星元操作介绍。客户提出针对前期异常消耗，希望后续能有导出消耗明细功能，用于判断消耗模块及平均值<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>BeautiNow</td><td class="reason-cell">客户今日做大促，无时间操作，约的下周二线上演示<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
-          <tr><td>New balance</td><td class="reason-cell">客户约的8月19日线下会议，将新增购产品及AI相关操作全部讲一遍，目前先不线上。<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
+          <tr><td>New balance</td><td class="reason-cell">客户约的8月19日线下会议，将新增购产品及AI相关操作全部讲一遍，目前先不线上<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>倍舒特</td><td class="reason-cell">暂无</td><td class="reason-cell">客户还没有开始自己测试，下周会跟客户线上演示<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td></tr>
           <tr><td>高仪</td><td class="reason-cell">通过AI作图优化设计效率及降低成本</td><td class="reason-cell">暂无</td></tr>
           <tr><td>三棵树智慧云店</td><td class="reason-cell">客户需要先体验，下周跟进使用情况<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
@@ -690,21 +684,17 @@
           <tr><td>摩恩</td><td class="reason-cell">暂无其他明确诉求，对作图/视频能力比较感兴趣，还在功能试用中<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>九江双蒸</td><td class="reason-cell">客户还没开始测试，还未有反馈</td><td class="reason-cell">暂无</td></tr>
           <tr><td>松赞文旅</td><td class="reason-cell">通过AI作图优化设计效率及降低成本</td><td class="reason-cell">暂无</td></tr>
-          <tr><td>纯享</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，对于装修感兴趣，会尝试后台摸索。</td></tr>
-          <tr><td>简醇</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，商户对原本首页装修不满意，现对店铺装修的场景比较感兴趣，还在尝试中。<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td></tr>
-          <tr><td>悦鲜活</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，商户对作图和装修比较需求，尝试探索阶段。价格敏感型，关注后续收费。</td></tr>
-          <tr><td>巴拉巴拉</td><td class="reason-cell">暂无</td><td class="reason-cell">1-导购线索的跟进链路需要优化到更短。
-2-策略生成的时间需要优化到15s以内。
-3-AI文案呆板，希望可以优化的更贴合导购日常的语言。</td></tr>
+          <tr><td>纯享</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，对于装修感兴趣，会尝试后台摸索</td></tr>
+          <tr><td>简醇</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，商户对原本首页装修不满意，现对店铺装修的场景比较感兴趣，还在尝试中<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td></tr>
+          <tr><td>悦鲜活</td><td class="reason-cell">暂无</td><td class="reason-cell">暂无其他需求，商户对作图和装修比较需求，尝试探索阶段。价格敏感型，关注后续收费</td></tr>
+          <tr><td>巴拉巴拉</td><td class="reason-cell">暂无</td><td class="reason-cell">1-导购线索的跟进链路需要优化到更短。 2-策略生成的时间需要优化到15s以内。 3-AI文案呆板，希望可以优化的更贴合导购日常的语言</td></tr>
           <tr><td>ZHUCHONGYUN</td><td class="reason-cell">暂无</td><td class="reason-cell">暂未详细演示，约下周二演示<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td></tr>
-          <tr><td>中和</td><td class="reason-cell">月度经营报告中无法获取分销推广数据
-如：分销员推广业绩/分销员推广带来访客数/分销员推挂钩带来访客数中有支付人数</td><td class="reason-cell">星元可根据指令获取该部分数据</td></tr>
+          <tr><td>中和</td><td class="reason-cell">月度经营报告中无法获取分销推广数据 如：分销员推广业绩/分销员推广带来访客数/分销员推挂钩带来访客数中有支付人数</td><td class="reason-cell">星元可根据指令获取该部分数据</td></tr>
           <tr><td>圣瑞商业</td><td class="reason-cell">给客户用AI搭了下经营月报，同时提供了使用手册发给客户看，待客户测试看看反馈<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>Miele美诺官方商城</td><td class="reason-cell">由于客户是是买二送一年半，目前刚好是赠送期，没有免费星币，无法测试，已引导她充值29.9的套餐包，客户反馈需要的时候再充值<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>滨特尔官方商城</td><td class="reason-cell">暂无明确诉求，因为经销商零售业务模块还处在系统搭建中，暂未正式对外营业，目前仅种草了作图和文案生产能力，客户体验下来还不错</td><td class="reason-cell">暂无</td></tr>
           <tr><td>胡庆余堂国药号线上商城</td><td class="reason-cell">暂无</td><td class="reason-cell">客户还没有开始自己测试，下周会跟客户线上演示<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td></tr>
-          <tr><td>紫色花语</td><td class="reason-cell">1.总店挂导购实现线索使用；
-2.其他场景内部先体验测试看看；</td><td class="reason-cell">暂无</td></tr>
+          <tr><td>紫色花语</td><td class="reason-cell">1.总店挂导购实现线索使用； 2.其他场景内部先体验测试看看</td><td class="reason-cell">暂无</td></tr>
           <tr><td>Freja Atelier</td><td class="reason-cell">客户自己先操作，约下周二演示<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>OK NOW</td><td class="reason-cell">待客户试用后反馈<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
           <tr><td>美洋</td><td class="reason-cell">客户暂定周三/四约会议测试沟通<span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span></td><td class="reason-cell">暂无</td></tr>
@@ -797,6 +787,7 @@
     <!-- 5. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 不感兴趣原因分析（6家）</div>
+
       <p class="field-note" style="margin-bottom:12px;"><span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span> 红圈感叹号：标记表示该处填写内容为沟通进度描述（如"暂未回复""先看看""已发送资料待反馈"等），并非商户真实的不感兴趣原因，需运营人员复核修正。</p>
       <div class="summary-box">
         <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
@@ -959,16 +950,16 @@
     <!-- 1. 推广漏斗 -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 推广漏斗</div>
-      <p class="field-note" style="margin-bottom:16px;">数据口径：计划推广商户总数 = 清单中全部商户（按店铺bosid去重，含状态商户，共 161 个）；已推广商户数 = "是否向商家宣导"选择"是"的商户（161 个）。</p>
+      <p class="field-note" style="margin-bottom:16px;">数据口径：已推广商户数 = "是否向商家宣导"选择"是"的商户（161 个）；计划推广商户总数通用运营未提供，显示为「待提供」，覆盖率提供后计算。</p>
       <div class="funnel-container">
         <div class="funnel-stage funnel-s1">
           <span class="stage-label">计划推广商户总数</span>
-          <span class="stage-right"><span class="stage-value">161</span><span class="stage-percent">计划全量</span></span>
+          <span class="stage-right"><span class="stage-value">待提供</span><span class="stage-percent">计划全量</span></span>
         </div>
         <div class="funnel-arrow funnel-a1"></div>
         <div class="funnel-stage funnel-s2">
           <span class="stage-label">已推广商户数</span>
-          <span class="stage-right"><span class="stage-value">161</span><span class="stage-percent">100.0%</span></span>
+          <span class="stage-right"><span class="stage-value">161</span><span class="stage-percent">提供后计算</span></span>
         </div>
         <div class="funnel-arrow funnel-a2"></div>
         <div class="funnel-stage funnel-s3">
@@ -1054,6 +1045,8 @@
     <!-- 5. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 不感兴趣原因分析（72家）</div>
+      <div class="quality-alert">⚠ <strong>数据质量提醒：</strong>通用运营「不感兴趣」共 72 家，其中 55 家（76.4%）实际填写为"客户说现在没时间去体验，还没反馈"等<strong>沟通进度</strong>，并非真实不感兴趣。建议运营复核并修正 col11「商户是否对场景感兴趣」字段后重新统计。</div>
+
       <p class="field-note" style="margin-bottom:12px;"><span class="quality-warn" title="⚠ 填写内容逻辑有误">!</span> 红圈感叹号：标记表示该处填写内容为沟通进度描述（如"暂未回复""先看看""已发送资料待反馈"等），并非商户真实的不感兴趣原因，需运营人员复核修正。</p>
       <div class="summary-box">
         <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
@@ -1283,9 +1276,9 @@
       <table class="data-table">
         <thead><tr><th>指标</th><th class="num">行业运营部</th><th class="num">SMB运营部</th><th class="num">通用运营</th></tr></thead>
         <tbody>
-          <tr><td>计划推广商户总数</td><td class="num">380</td><td class="num">1914</td><td class="num">161</td></tr>
+          <tr><td>计划推广商户总数</td><td class="num">380</td><td class="num">1914</td><td class="num">待提供</td></tr>
           <tr><td>已推广商户数</td><td class="num">124</td><td class="num">349</td><td class="num">161</td></tr>
-          <tr><td>覆盖率</td><td class="num">32.6%</td><td class="num">18.2%</td><td class="num">100.0%</td></tr>
+          <tr><td>覆盖率</td><td class="num">32.6%</td><td class="num">18.2%</td><td class="num">提供后计算</td></tr>
           <tr><td>感兴趣（是）</td><td class="num">91</td><td class="num">37</td><td class="num">42</td></tr>
           <tr><td>不感兴趣（否）</td><td class="num">21</td><td class="num">6</td><td class="num">72</td></tr>
           <tr><td>未填写</td><td class="num">12</td><td class="num">306</td><td class="num">47</td></tr>
@@ -1323,27 +1316,13 @@
       </table>
     </div>
 
-    <!-- 对比：运营人员填写质量 -->
-    <div class="section">
-      <div class="section-title comparison"><span class="icon">总结</span>运营人员填写质量</div>
-      <div class="summary-box">
-        <p>本次检查三个部门「客户诉求 &amp; 优化期望」填写内容，共发现 <strong>31</strong> 处逻辑有误（已用红圈标出）：</p>
-        <ul>
-          <li><strong>行业运营部（25处）：</strong>问题最突出。大量商户的"客户诉求/优化期望"实际填写的是沟通进度（如"约下周二演示""待客户试用后反馈""客户周一比较忙"），并非客户主动提出的真实需求，需运营人员区分"跟进动作"与"客户诉求"。</li>
-          <li><strong>SMB运营部（5处）：</strong>整体较规范，少数填写为"还需再跟进下使用情况"等过程性描述，需补充客户真实诉求。</li>
-          <li><strong>通用运营（1处）：</strong>填写最为规范，仅个别为"自己摸索"等操作状态描述。</li>
-        </ul>
-        <p><strong>共性建议：</strong>诉求只填客户主动提出的需求（如"希望导出消耗明细""增加AI客服自动回复"）；时间约定、演示安排、等待反馈等沟通进度应记录在工作跟进中，不应写入"客户诉求/优化期望"字段。</p>
-      </div>
-    </div>
-
     <!-- 对比：总结 -->
     <div class="section">
       <div class="section-title comparison"><span class="icon">总结</span>推广情况总结</div>
       <div class="summary-box">
         <ul>
-          <li><strong>整体覆盖率偏低：</strong>三部门合计已推广 634 家，占计划推广总数 25% ，SMB覆盖率仅 18.2%，是后续重点。</li>
-          <li><strong>通用运营转化结构特殊：</strong>通用 72 家明确表示"不感兴趣"，占比 44.7%，居三部门之首；但满足诉求率较高（90.5%）。</li>
+          <li><strong>整体覆盖率偏低：</strong>行业+SMB 合计已推广 473 家、计划推广 2294 家，覆盖率 20%；通用运营计划推广总数待提供，覆盖率提供后计算；SMB覆盖率仅 18.2%，是后续重点。</li>
+          <li><strong>通用运营数据质量存疑：</strong>通用「不感兴趣」72 家，但其中约 55 家（76%）实为"客户没时间体验/待反馈"等沟通进度，并非真实拒绝，居三部门之首的"不感兴趣"数量<strong>存在大量水分</strong>；其满足诉求率（90.5%）仍需结合复核后数据判断。</li>
           <li><strong>行业转化链路较优：</strong>感兴趣率 73.4%、满足诉求率 45.1% 均高于其他部门，增购意愿 7 家也为三部门最多。</li>
           <li><strong>高频场景集中：</strong>作图/视频能力、店铺装修、月度经营报告、商家文案内容素材生产为三部门共同高频场景。</li>
         </ul>
@@ -1362,6 +1341,20 @@
         </ul>
       </div>
     </div>
+    <!-- 对比：运营人员填写质量 -->
+    <div class="section">
+      <div class="section-title comparison"><span class="icon">总结</span>运营人员填写质量</div>
+      <div class="summary-box">
+        <p>本次检查三个部门「客户诉求 &amp; 优化期望」填写内容，共发现 <strong>31</strong> 处逻辑有误（已用红圈标出）：</p>
+        <ul>
+          <li><strong>行业运营部（25处）：</strong>问题最突出。大量商户的"客户诉求/优化期望"实际填写的是沟通进度（如"约下周二演示""待客户试用后反馈""客户周一比较忙"），并非客户主动提出的真实需求，需运营人员区分"跟进动作"与"客户诉求"。</li>
+          <li><strong>SMB运营部（5处）：</strong>整体较规范，少数填写为"还需再跟进下使用情况"等过程性描述，需补充客户真实诉求。</li>
+          <li><strong>通用运营：</strong>「客户诉求/优化期望」字段填写较规范（1处问题），但<strong>「不感兴趣原因」存在严重数据质量问题</strong>——72 家中约 55 家（76%）填写为"客户没时间体验/待反馈"等沟通进度，并非真实不感兴趣，建议优先复核 col11「商户是否对场景感兴趣」字段。</li>
+        </ul>
+        <p><strong>共性建议：</strong>诉求只填客户主动提出的需求（如"希望导出消耗明细""增加AI客服自动回复"）；时间约定、演示安排、等待反馈等沟通进度应记录在工作跟进中，不应写入"客户诉求/优化期望"字段。</p>
+      </div>
+    </div>
+
   </div>
 
 </div>
@@ -1391,6 +1384,8 @@
   .tab-content[id$="-smb"] .cat-tab-btn.active { background:#00b894; border-color:#00b894; }
   .tab-content[id$="-general"] .cat-tab-btn.active { background:#6c5ce7; border-color:#6c5ce7; }
   .tab-content[id$="-compare"] .cat-tab-btn.active { background:#667eea; border-color:#667eea; }
+  .quality-alert { background:#fff5f5; border:1px solid #f0c5c5; border-left:4px solid #e74c3c; color:#a94442; border-radius:8px; padding:12px 16px; margin:0 0 14px; font-size:13.5px; line-height:1.7; }
+  .quality-alert strong { color:#c0392b; }
 </style>
 
 <script>
