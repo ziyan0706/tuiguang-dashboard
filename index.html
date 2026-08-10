@@ -43,9 +43,10 @@
     transition: transform 0.2s;
   }
   .overview-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-  .overview-card .label { font-size: 14px; color: #666; margin-bottom: 8px; }
+  .overview-card .label { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 8px; line-height: 1.4; }
+  .overview-card .value-row { white-space: nowrap; }
   .overview-card .value { font-size: 36px; font-weight: 700; color: #667eea; }
-  .overview-card .unit { font-size: 14px; color: #999; margin-left: 4px; }
+  .overview-card .unit { font-size: 16px; color: #666; margin-left: 2px; font-weight: 600; }
   .overview-card .sub-label { font-size: 12px; color: #999; margin-top: 4px; }
   .overview-card.industry .value { color: #e17055; }
   .overview-card.smb .value { color: #00b894; }
@@ -304,23 +305,22 @@
   <div class="overview-grid">
     <div class="overview-card">
       <div class="label">三部门合计<br>计划推广商户总数</div>
-      <div class="value">2,455</div>
-      <div class="unit">个</div>
+      <div class="value-row"><span class="value">2,455</span><span class="unit">个</span></div>
       <div class="meta-line">行业380 · SMB 1,914 · 通用161</div>
     </div>
     <div class="overview-card industry">
       <div class="label">行业运营部<br>已推广 / 覆盖率</div>
-      <div class="value">124</div><span class="unit">个</span>
+      <div class="value-row"><span class="value">124</span><span class="unit">个</span></div>
       <div class="meta-line">覆盖率 <strong>32.6%</strong>（380个计划中）</div>
     </div>
     <div class="overview-card smb">
       <div class="label">SMB运营部<br>已推广 / 覆盖率</div>
-      <div class="value">349</div><span class="unit">个</span>
+      <div class="value-row"><span class="value">349</span><span class="unit">个</span></div>
       <div class="meta-line">覆盖率 <strong>18.2%</strong>（1,914个计划中）</div>
     </div>
     <div class="overview-card general">
       <div class="label">通用运营<br>已推广 / 覆盖率</div>
-      <div class="value">161</div><span class="unit">个</span>
+      <div class="value-row"><span class="value">161</span><span class="unit">个</span></div>
       <div class="meta-line">覆盖率 <strong>提供后计算</strong>（计划推广总数待提供）<span class="quality-warn" title="⚠ 因通用运营未提供计划推广商户总数，覆盖率暂无法计算">!</span></div>
       <div class="card-warn-note"><span class="quality-warn" title="⚠ 因通用运营未提供计划推广商户总数，覆盖率错误">!</span>通用运营未提供「计划推广商户总数」，覆盖率提供后计算；且其「不感兴趣」72家中55家实为"客户没时间体验/待反馈"等沟通进度，数据质量存疑，建议复核。</div>
     </div>
@@ -400,7 +400,7 @@
     </div>
   </div>
 
-                              <!-- Tabs -->
+                                <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -1344,6 +1344,9 @@
     <!-- 对比：运营人员填写质量 -->
     <div class="section">
       <div class="section-title comparison"><span class="icon">总结</span>运营人员填写质量</div>
+      <div class="quality-alert" style="margin-bottom:16px;">
+        ⚠ <strong>核心结论：</strong>通用运营 col11「商户是否对场景感兴趣」字段存在<strong>大规模错填</strong>——72 家标记为"不感兴趣"的商户中，约 55 家（76%）实际填写内容为"客户没时间体验/待反馈"等沟通进度，并非真实不感兴趣。<strong>该字段数据不可直接用于判断真实拒绝率</strong>，建议通用运营优先复核修正。
+      </div>
       <div class="summary-box">
         <p>本次检查三个部门「客户诉求 &amp; 优化期望」填写内容，共发现 <strong>31</strong> 处逻辑有误（已用红圈标出）：</p>
         <ul>
