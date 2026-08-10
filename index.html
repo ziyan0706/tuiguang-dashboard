@@ -216,81 +216,6 @@
   .ic-tbd { background: #f0f4ff; border-color: #c7d2fe; }
   .ic-tbd .ic-value { color: #6366f1; }
 
-  /* Interest distribution table */
-  .interest-dist-table {
-    width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0;
-  }
-  .interest-dist-table thead th {
-    background: #f8f9fa; color: #666; font-weight: 600;
-    padding: 12px 16px; text-align: left; border-bottom: 2px solid #e8e8e8;
-  }
-  .interest-dist-table tbody td {
-    padding: 12px 16px; border-bottom: 1px solid #f0f0f0; vertical-align: middle;
-  }
-  .interest-dist-table .dist-bar-track {
-    flex: 1; height: 24px; background: #f0f0f0; border-radius: 12px; overflow: hidden;
-    display: flex; align-items: center;
-  }
-  .interest-dist-table .dist-bar-fill {
-    height: 100%; border-radius: 12px; transition: width 0.6s;
-  }
-  .interest-dist-table .dist-bar-fill.yes { background: linear-gradient(90deg, #00b894, #55efc4); }
-  .interest-dist-table .dist-bar-fill.no { background: linear-gradient(90deg, #ef4444, #fca5a5); }
-  .interest-dist-table .dist-bar-fill.pending { background: linear-gradient(90deg, #f59e0b, #fde68a); }
-  .interest-dist-table .dist-bar-fill.empty { background: linear-gradient(90deg, #9ca3af, #d1d5db); }
-  .interest-dist-table .dist-bar-label {
-    font-weight: 700; font-size: 13px; margin-left: 8px; white-space: nowrap;
-  }
-
-  /* Reason cards (not interested / no purchase) */
-  .reason-group {
-    margin-bottom: 16px;
-  }
-  .reason-group-title {
-    font-size: 15px; font-weight: 700; color: #333; margin-bottom: 10px;
-    padding: 8px 12px; background: #f8f9fa; border-radius: 6px; display: inline-block;
-  }
-  .reason-group-count {
-    font-size: 13px; color: #666; font-weight: 400; margin-left: 6px;
-  }
-  .reason-card {
-    background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 14px 18px;
-    margin-bottom: 10px; border-left: 4px solid #3b82f6; transition: all 0.2s;
-  }
-  .reason-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .reason-card-header {
-    font-weight: 700; font-size: 14px; color: #333; margin-bottom: 6px;
-  }
-  .reason-card-shops {
-    font-size: 13px; color: #666; line-height: 1.8;
-  }
-  .reason-card-shops strong { color: #333; }
-  .reason-card-detail {
-    font-size: 13px; color: #888; margin-top: 6px; font-style: italic;
-    border-top: 1px dashed #f0f0f0; padding-top: 6px;
-  }
-  .reason-card.no-purchase { border-left-color: #e17055; }
-
-  /* Customer demand & optimize cards */
-  .demand-card {
-    background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 14px 18px;
-    margin-bottom: 10px; border-left: 4px solid #00b894; transition: all 0.2s;
-  }
-  .demand-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .demand-card-header {
-    font-weight: 700; font-size: 14px; color: #333; margin-bottom: 6px;
-  }
-  .demand-card-content {
-    font-size: 13px; color: #555; line-height: 1.8;
-  }
-  .demand-card-tag {
-    display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px;
-    font-weight: 600; margin-right: 6px;
-  }
-  .demand-tag-optimize { background: #f0fdf4; color: #00b894; }
-  .demand-tag-demand { background: #fffbeb; color: #f59e0b; }
-  .demand-tag-purchase { background: #fef2f2; color: #ef4444; }
-
   /* Data table */
   .data-table {
     width: 100%; border-collapse: collapse; font-size: 14px;
@@ -354,6 +279,26 @@
     .interest-cards { grid-template-columns: 1fr; }
     .tab-btn { font-size: 13px; padding: 12px 10px; }
   }
+
+  /* Reason Tabs */
+  .reason-tabs-container { margin: 16px 0; }
+  .reason-tab-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; border-bottom: 2px solid #e8e8e8; padding-bottom: 8px; }
+  .reason-tab-btn { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid #d1d5db; background: #fff; color: #555; transition: all 0.2s; white-space: nowrap; }
+  .reason-tab-btn:hover { border-color: #667eea; color: #667eea; }
+  .reason-tab-btn.active { background: #667eea; color: #fff; border-color: #667eea; }
+  .reason-tab-btn.active.smb-active { background: #00b894; border-color: #00b894; }
+  .reason-tab-btn.active.gen-active { background: #6c5ce7; border-color: #6c5ce7; }
+  .reason-tab-panel { display: none; }
+  .reason-tab-panel.active { display: block; animation: fadeIn 0.3s; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Reason cards for tabs */
+  .reason-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid #3b82f6; transition: all 0.2s; }
+  .reason-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .reason-card-header { font-weight: 700; font-size: 14px; color: #333; margin-bottom: 6px; }
+  .reason-card-shops { font-size: 13px; color: #666; line-height: 1.8; }
+  .reason-card.no-purchase { border-left-color: #e17055; }
+
 </style>
 </head>
 <body>
@@ -508,155 +453,11 @@
           <span class="stage-right"><span class="stage-value">7</span><span class="stage-percent">5.7%（占已推广）</span></span>
         </div>
       </div>
-    </div>
-
-    <!-- 商户感兴趣情况 -->
-    <div class="section">
-      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 商户感兴趣情况</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 123 家商户的反馈情况</p>
-      <table class="interest-dist-table">
-        <thead>
-          <tr><th>反馈类型</th><th class="num">商户数</th><th class="num">占比</th><th>分布</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="badge badge-yes">感兴趣（是）</span></td>
-            <td class="num">90</td>
-            <td class="num"><strong>73.2%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill yes" style="width:73.2%"></div><span class="dist-bar-label">90家</span></div></div></td>
-          </tr>
-          <tr>
-            <td><span class="badge badge-no">不感兴趣（否）</span></td>
-            <td class="num">21</td>
-            <td class="num"><strong>17.1%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill no" style="width:17.1%"></div><span class="dist-bar-label">21家</span></div></div></td>
-          </tr>
-          <tr>
-            <td>未填写</td>
-            <td class="num">12</td>
-            <td class="num"><strong>9.8%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill empty" style="width:9.8%"></div><span class="dist-bar-label">12家</span></div></div></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #e17055;">不感兴趣原因</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">品牌定位无运营需求<span class="reason-group-count">10 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — 4 个店铺</div>
-          <div class="reason-card-shops"><strong>NOBIS、歌力思男装、LAUREL、IRO</strong> — 仅做官网展示，没有日常运营需求</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">特步（中国）有限公司 — 4 个店铺</div>
-          <div class="reason-card-shops"><strong>特步儿童电商、帕拉丁、K/Swiss、迈乐</strong> — 品牌商城定位员工内购，日常基本无运营，无需求</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海蓝棠－博步皮鞋有限公司 — 蓝棠博步</div>
-          <div class="reason-card-shops">小程序只做展示不运营，对付费及运营相关均不感兴趣</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海唯我焦点时装设计有限公司 — 三只小山羊</div>
-          <div class="reason-card-shops">无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海巨燃实业有限公司 — LucasEmilyLouie</div>
-          <div class="reason-card-shops">小程序只做收银开单，不做私域运营，日常对延伸付费产品不感兴趣</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">运营人手不足 / 与主商城同团队<span class="reason-group-count">2 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">福建柒牌时装科技股份有限公司 — 2 个店铺</div>
-          <div class="reason-card-shops"><strong>柒牌（2 条记录）</strong> — 跟主商城同个运营团队，目前人手不足，该微商城目前基本无运营</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">已推送资料，客户未回复 / 需先看<span class="reason-group-count">4 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">统一企业（中国）投资有限公司重庆分公司 — 统一美研社</div>
-          <div class="reason-card-shops">已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通。</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">无锡歌帝科技股份有限公司 — Goodio歌帝</div>
-          <div class="reason-card-shops">已发送操作指南及产品说明，但客户近期重点在于内部调整主体变更，暂无精力了解及研究。后续主体内部变更完可研究看看。</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">美客思贸易（上海）有限公司 — 镰仓衬衫</div>
-          <div class="reason-card-shops">已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广东宝路易新零售商业有限公司 — 宝路易商城</div>
-          <div class="reason-card-shops">已发送重点模块及操作指南、产品介绍，客户回复"好的"先看看，过两天再问下进展。</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">产品需求未满足<span class="reason-group-count">1 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">江博士（集团）有限公司 — 江博士</div>
-          <div class="reason-card-shops">商家核心痛点目前需AI解决的问题为<strong>定时批量修改商品标题</strong>，目前星元可实现修改标题，但无法设置定时。</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">未回复 / 内部无预算<span class="reason-group-count">4 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海铱锘金电子商务有限公司 — MOMO ERA</div>
-          <div class="reason-card-shops">重点说明了几个适配场景，并发送操作指南及产品说明，客户需先看，如有感兴趣点再进行演示。</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">中国邮政集团有限公司北京市邮政电子商务局 — 邮政菜单</div>
-          <div class="reason-card-shops">推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海得厚经贸发展有限公司 — COTEMP</div>
-          <div class="reason-card-shops">基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算）</div>
-        </div>
-      </div>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #fdcb6e;">感兴趣但暂无增购意愿 / 待定（8 家）</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">暂无预算<span class="reason-group-count">4 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">来酷科技有限公司 — 来酷智生活</div>
-          <div class="reason-card-shops">感兴趣场景：导购线索运营、作图/视频能力、月度经营报告等</div>
-          <div class="reason-card-detail">不增购原因：暂无预算</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — SP</div>
-          <div class="reason-card-shops">感兴趣场景：AI试衣</div>
-          <div class="reason-card-detail">不增购原因：没有预算，需要跟领导申请</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">广东华信雅迪斯时装有限公司 — 雅迪斯</div>
-          <div class="reason-card-shops">感兴趣场景：移动端经营分析</div>
-          <div class="reason-card-detail">不增购原因：客户暂无多的预算，先使用一段时间</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">福建柒牌时装科技股份有限公司 — 柒牌</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、作图/视频能力</div>
-          <div class="reason-card-detail">不增购原因：无预算：受线索运营今年取消无限量，续费金额翻10倍，客户预算缩紧</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">代运营团队评估 / 无采购决策权<span class="reason-group-count">3 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">腾讯云计算（北京）有限责任公司 — 德龙（2 条记录）</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、作图/视频能力</div>
-          <div class="reason-card-detail">不增购原因：问了报价，但是没有特别说啥，主要是代运营团队，他们采购这块品牌是不出钱的，要代运营评估这个费用价值是否合适，还在测试体验中</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">资生堂丽源化妆品有限公司 — 欧珀莱</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：目前对接的是业务侧实际使用商城后台功能较多的角色，对于产品增购等只有提议权，暂无法判断是否可以增购。后续约IT以及业务部门领导会议推广。</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">公司经营困难<span class="reason-group-count">1 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">杭州皓峰电子商务有限公司 — OETZI</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力</div>
-          <div class="reason-card-detail">不增购原因：公司经营困难（已经发不出工资了），没有预算</div>
-        </div>
+      <!-- 兴趣分布卡片 -->
+      <div class="interest-cards">
+        <div class="interest-card ic-yes"><div class="ic-value">90</div><div class="ic-label">感兴趣（是）</div></div>
+        <div class="interest-card ic-no"><div class="ic-value">21</div><div class="ic-label">不感兴趣（否）</div></div>
+        <div class="interest-card ic-pending"><div class="ic-value">12</div><div class="ic-label">未填写</div></div>
       </div>
     </div>
 
@@ -732,151 +533,120 @@
       </div>
     </div>
 
-    <!-- 客户诉求 & 优化期望 -->
+    <!-- 关键客户诉求 & 优化期望 -->
     <div class="section">
-      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 客户诉求 & 优化期望</div>
-      <p class="field-note" style="margin-bottom:12px;">从 Excel「客户诉求」和「优化期望」字段提取有实质内容的反馈（已去除"暂无"/"待定"等空泛内容）。</p>
-
-      <div class="demand-card">
-        <div class="demand-card-header">浙江森马服饰股份有限公司 — 巴拉巴拉 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>1-导购线索的跟进链路需优化到更短；2-策略生成时间需优化到15s以内；3-AI文案呆板，希望更贴合导购日常语言
-        </div>
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的重点客户（7家）</h4>
+        <ul>
+          <li><strong>浙江森马服饰 — 巴拉巴拉（增购=是）：</strong>1-导购线索的跟进链路需优化到更短；2-策略生成时间需优化到15s以内；3-AI文案呆板，希望更贴合导购日常语言</li>
+          <li><strong>苏州智尚信息技术 — 中和（增购=是）：</strong>月度经营报告中无法获取分销推广数据（分销员推广业绩/访客数/支付人数），希望星元可根据指令获取该部分数据</li>
+          <li><strong>高仪（上海）卫生洁具 — 高仪（增购=是）：</strong>通过AI作图优化设计效率及降低成本</li>
+          <li><strong>松赞绿谷（北京）科技 — 松赞文旅（增购=是）：</strong>通过AI作图优化设计效率及降低成本</li>
+          <li><strong>厦门市特步儿童用品 — 特步儿童（增购=是）：</strong>感兴趣场景：导购线索运营、AI试衣</li>
+          <li><strong>哥伦比亚运动服装商贸 — 哥伦比亚（增购=是）：</strong>感兴趣场景：导购线索运营、AI试衣</li>
+          <li><strong>多一度（泉州）电子商务 — 361度儿童（增购=是）：</strong>感兴趣场景：导购线索运营、作图/视频能力、AI试衣</li>
+        </ul>
       </div>
-      <div class="demand-card">
-        <div class="demand-card-header">苏州智尚信息技术有限公司 — 中和 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>月度经营报告中无法获取分销推广数据（分销员推广业绩/访客数/支付人数），希望星元可根据指令获取该部分数据
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">高仪（上海）卫生洁具有限公司 — 高仪 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>通过AI作图优化设计效率及降低成本
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">松赞绿谷（北京）科技发展有限公司 — 松赞文旅 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>通过AI作图优化设计效率及降低成本
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">四川领跑体育用品有限公司 — 领跑体育</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>客户提出前期异常消耗问题，希望后续能导出消耗明细功能，用于判断消耗模块及平均值
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">上海逸刻新零售网络科技有限公司 — 逸刻EGO</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>希望把促销活动字段生成表格形式，通过导表AI识别帮忙生成活动
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">福建紫色花语集团有限公司 — 紫色花语</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>1.总店挂导购实现线索使用；2.其他场景内部先体验测试看看
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">资生堂丽源化妆品有限公司 — 欧珀莱</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>可以在星元上创建组合商品
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">美诺电器有限公司 — Miele美诺官方商城</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>客户是买二送一年半，刚好是赠送期没有免费星币无法测试，已引导她充值29.9的套餐包
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">君乐宝乳业集团股份有限公司 — 悦鲜活</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无其他需求，商户对作图和装修比较需求，探索阶段。价格敏感型，关注后续收费
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">君乐宝乳业集团股份有限公司 — 简醇</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无其他需求，商户对原本首页装修不满意，现对店铺装修的场景比较感兴趣，还在尝试中
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">君乐宝乳业集团股份有限公司 — 纯享</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无其他需求，对于装修感兴趣，会尝试后台摸索
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">广州金铂商业有限公司 — 金铂</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>重点讲了数据经营报告和作图能力，客户要自己测试下看看
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">上海逸刻新零售网络科技有限公司 — 逸刻EGO</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>希望可以把促销活动的字段生成表格形式，然后通过导表的形式Ai识别帮忙生成活动
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">富俊汇赢科技（上海）有限公司 — 摩恩</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无其他明确诉求，对作图/视频能力比较感兴趣，还在功能试用中
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">苏州智尚信息技术有限公司 — 中和</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>星元可根据指令获取分销推广数据（分销员推广业绩/访客数/支付人数）
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">浙江森马服饰股份有限公司 — 巴拉巴拉</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>1-导购线索的跟进链路需优化到更短；2-策略生成时间需优化到15s以内；3-AI文案呆板，希望更贴合导购日常语言
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">无锡轩帝尼服饰有限公司 — 红豆</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>商品详情页制作
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">倍舒特（天津）卫生用品有限公司 — 倍舒特</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>客户还没有开始自己测试，下周会跟客户线上演示
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">杭州胡庆余堂国药号有限公司 — 胡庆余堂国药号线上商城</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>客户还没有开始自己测试，下周会跟客户线上演示
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">深圳玛丝菲尔噢姆服饰有限公司 — AUM</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂未详细演示，约下周二演示
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">深圳玛丝菲尔时装股份有限公司 — 玛丝菲尔云店</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂未详细演示，约下周二演示
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">克芮绮亚时装（中国）有限公司 — ZHUCHONGYUN</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂未详细演示，约下周二演示
-        </div>
+      <div class="summary-box" style="border-left-color: #00b894; margin-top:16px;">
+        <h4>其他有实质反馈的商户</h4>
+        <ul>
+          <li><strong>锐力体育（浙江）— 锐力体育：</strong>目前客户还在内部测试未推向终端，希望被动场景增加AI建议话术及活动商品推荐</li>
+          <li><strong>四川领跑体育用品 — 领跑体育：</strong>客户提出前期异常消耗问题，希望后续能导出消耗明细功能，用于判断消耗模块及平均值</li>
+          <li><strong>资生堂丽源化妆品 — 欧珀莱：</strong>可以在星元上创建组合商品</li>
+          <li><strong>上海逸刻新零售网络 — 逸刻EGO：</strong>希望把促销活动字段生成表格形式，通过导表AI识别帮忙生成活动</li>
+          <li><strong>美诺电器 — Miele美诺官方商城：</strong>客户是买二送一年半，刚好是赠送期没有免费星币无法测试，已引导充值29.9套餐包</li>
+          <li><strong>福建紫色花语集团 — 紫色花语：</strong>1.总店挂导购实现线索使用；2.其他场景内部先体验测试</li>
+          <li><strong>新百伦贸易（中国）— New balance：</strong>客户约8月19日线下会议，将新增购产品及AI相关操作全部讲一遍</li>
+          <li><strong>君乐宝乳业 — 悦鲜活：</strong>商户对作图和装修比较需求，探索阶段。价格敏感型，关注后续收费</li>
+        </ul>
       </div>
     </div>
 
+        <!-- 不感兴趣原因 -->
+
+      <h4 style="font-size:15px;color:#333;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid #e17055;">不感兴趣原因</h4><div class="reason-tabs-container"><div class="reason-tab-nav"><button class="reason-tab-btn active ind-active" onclick="showReasonTab(this,'ni-ind-0')">仅做官网展示，没有日常运营需求。 4家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-1')">品牌商城定位员工内购，日常基本无运营，无需求 3家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-2')">品牌商城定位员工内购，日常基本无运营，货品上架是第三方全平台一起上架，无需运营处理 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-3')">已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。
+客户小程序内购使用，拒绝私聊添加好友，所有信息... 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-4')">跟主商城同个运营团队，目前人手不足，该微商城目前基本无运营 2家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-5')">商家核心痛点目前需AI解决的问题为定时批量修改商品标题，目前星元可实现修改标题，但无法设置定时。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-6')">已发送操作指南及产品说明，但客户近期重点在于内部调整主体变更，暂无精力了解及研究。后续主体内部变更完可研... 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-7')">已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-8')">已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-9')">推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-10')">已发送操作指南及产品说明，客户未回复，过两天再沟通问问。
+客户小程序只做展示不运营，对付费及运营相关均不... 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-11')">已发送操作指南及产品说明，客户未回复。
+客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其... 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-12')">重点说明了几个适配场景，并发送操作指南及产品说明，客户需先看，如有感兴趣点再进行演示。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-13')">已发送操作指南及产品说明，回复暂时不需要。
+客户小程序只做收银开单，不做私域运营，日常对延伸付费产品不感兴趣。 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-ind-14')">基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算） 1家</button></div><div class="reason-tab-panel active" id="ni-ind-0"><div class="reason-card">
+          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — NOBIS</div>
+          <div class="reason-card-shops">仅做官网展示，没有日常运营需求。</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — 歌力思男装</div>
+          <div class="reason-card-shops">仅做官网展示，没有日常运营需求。</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — LAUREL</div>
+          <div class="reason-card-shops">仅做官网展示，没有日常运营需求。</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳歌力思服饰股份有限公司 — IRO</div>
+          <div class="reason-card-shops">仅做官网展示，没有日常运营需求。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-1"><div class="reason-card">
+          <div class="reason-card-header">特步（中国）有限公司 — 特步儿童电商</div>
+          <div class="reason-card-shops">品牌商城定位员工内购，日常基本无运营，无需求</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">特步（中国）有限公司 — K/Swiss</div>
+          <div class="reason-card-shops">品牌商城定位员工内购，日常基本无运营，无需求</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">特步（中国）有限公司 — 迈乐</div>
+          <div class="reason-card-shops">品牌商城定位员工内购，日常基本无运营，无需求</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-2"><div class="reason-card">
+          <div class="reason-card-header">特步（中国）有限公司 — 帕拉丁</div>
+          <div class="reason-card-shops">品牌商城定位员工内购，日常基本无运营，货品上架是第三方全平台一起上架，无需运营处理</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-3"><div class="reason-card">
+          <div class="reason-card-header">统一企业（中国）投资有限公司重庆分公司 — 统一美研社</div>
+          <div class="reason-card-shops">已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。
+客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-4"><div class="reason-card">
+          <div class="reason-card-header">福建柒牌时装科技股份有限公司 — 柒牌</div>
+          <div class="reason-card-shops">跟主商城同个运营团队，目前人手不足，该微商城目前基本无运营</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">福建柒牌时装科技股份有限公司 — 柒牌</div>
+          <div class="reason-card-shops">跟主商城同个运营团队，目前人手不足，该微商城目前基本无运营</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-5"><div class="reason-card">
+          <div class="reason-card-header">江博士（集团）有限公司 — 江博士</div>
+          <div class="reason-card-shops">商家核心痛点目前需AI解决的问题为定时批量修改商品标题，目前星元可实现修改标题，但无法设置定时。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-6"><div class="reason-card">
+          <div class="reason-card-header">无锡歌帝科技股份有限公司 — Goodio歌帝</div>
+          <div class="reason-card-shops">已发送操作指南及产品说明，但客户近期重点在于内部调整主体变更，暂无精力了解及研究。后续主体内部变更完可研究看看。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-7"><div class="reason-card">
+          <div class="reason-card-header">美客思贸易（上海）有限公司 — 镰仓衬衫</div>
+          <div class="reason-card-shops">已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-8"><div class="reason-card">
+          <div class="reason-card-header">广东宝路易新零售商业有限公司 — 宝路易商城</div>
+          <div class="reason-card-shops">已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-9"><div class="reason-card">
+          <div class="reason-card-header">中国邮政集团有限公司北京市邮政电子商务局 — 邮政菜单</div>
+          <div class="reason-card-shops">推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-10"><div class="reason-card">
+          <div class="reason-card-header">上海蓝棠－博步皮鞋有限公司 — 蓝棠博步</div>
+          <div class="reason-card-shops">已发送操作指南及产品说明，客户未回复，过两天再沟通问问。
+客户小程序只做展示不运营，对付费及运营相关均不感兴趣。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-11"><div class="reason-card">
+          <div class="reason-card-header">上海唯我焦点时装设计有限公司 — 三只小山羊</div>
+          <div class="reason-card-shops">已发送操作指南及产品说明，客户未回复。
+客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-12"><div class="reason-card">
+          <div class="reason-card-header">上海铱锘金电子商务有限公司 — MOMO ERA</div>
+          <div class="reason-card-shops">重点说明了几个适配场景，并发送操作指南及产品说明，客户需先看，如有感兴趣点再进行演示。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-13"><div class="reason-card">
+          <div class="reason-card-header">上海巨燃实业有限公司 — LucasEmilyLouie</div>
+          <div class="reason-card-shops">已发送操作指南及产品说明，回复暂时不需要。
+客户小程序只做收银开单，不做私域运营，日常对延伸付费产品不感兴趣。</div>
+        </div></div><div class="reason-tab-panel " id="ni-ind-14"><div class="reason-card">
+          <div class="reason-card-header">上海得厚经贸发展有限公司 — COTEMP</div>
+          <div class="reason-card-shops">基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算）</div>
+        </div></div></div></div>
+      <h4 style="font-size:15px;color:#333;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid #fdcb6e;">感兴趣但暂无增购意愿 / 待定（3 家）</h4><div class="reason-tabs-container"><div class="reason-tab-nav"><button class="reason-tab-btn active ind2-active" onclick="showReasonTab(this,'np-ind2-0')">暂无预算 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-ind2-1')">无预算：受线索运营今年取消无限量，续费金额翻10倍，客户预算缩紧 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-ind2-2')">公司经营困难（已经发不出工资了），没有预算 1家</button></div><div class="reason-tab-panel active" id="np-ind2-0"><div class="reason-card no-purchase">
+          <div class="reason-card-header">来酷科技有限公司 — 来酷智生活</div>
+          <div class="reason-card-shops">暂无预算</div>
+        </div></div><div class="reason-tab-panel " id="np-ind2-1"><div class="reason-card no-purchase">
+          <div class="reason-card-header">福建柒牌时装科技股份有限公司 — 柒牌</div>
+          <div class="reason-card-shops">无预算：受线索运营今年取消无限量，续费金额翻10倍，客户预算缩紧</div>
+        </div></div><div class="reason-tab-panel " id="np-ind2-2"><div class="reason-card no-purchase">
+          <div class="reason-card-header">杭州皓峰电子商务有限公司 — OETZI</div>
+          <div class="reason-card-shops">公司经营困难（已经发不出工资了），没有预算</div>
+        </div></div></div></div>
   </div>
 
   <!-- ============================== -->
@@ -914,159 +684,12 @@
           <span class="stage-right"><span class="stage-value">4</span><span class="stage-percent">1.0%（占已推广）</span></span>
         </div>
       </div>
-    </div>
-
-    <!-- 商户感兴趣情况 -->
-    <div class="section">
-      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 商户感兴趣情况</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 385 家商户的反馈情况</p>
-      <table class="interest-dist-table">
-        <thead>
-          <tr><th>反馈类型</th><th class="num">商户数</th><th class="num">占比</th><th>分布</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="badge badge-yes">感兴趣（是）</span></td>
-            <td class="num">42</td>
-            <td class="num"><strong>10.9%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill yes" style="width:10.9%"></div><span class="dist-bar-label">42家</span></div></div></td>
-          </tr>
-          <tr>
-            <td><span class="badge badge-no">不感兴趣（否）</span></td>
-            <td class="num">8</td>
-            <td class="num"><strong>2.1%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill no" style="width:2.1%"></div><span class="dist-bar-label">8家</span></div></div></td>
-          </tr>
-          <tr>
-            <td>客户暂未反馈</td>
-            <td class="num">291</td>
-            <td class="num"><strong>75.6%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill pending" style="width:75.6%"></div><span class="dist-bar-label">291家</span></div></div></td>
-          </tr>
-          <tr>
-            <td>未填写</td>
-            <td class="num">44</td>
-            <td class="num"><strong>11.4%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill empty" style="width:11.4%"></div><span class="dist-bar-label">44家</span></div></div></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #00b894;">不感兴趣原因</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">功能 / 场景不匹配<span class="reason-group-count">3 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海诗意雅薇网络科技有限公司 — CUBIC</div>
-          <div class="reason-card-shops">客户核心诉求还是倾向于模板市场，需要页面有动态效果符合调性</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">杭州智局科技有限公司 — 裹裹优选</div>
-          <div class="reason-card-shops">公司要求是接口对接解决商品同步问题，装修有美工复用素材，目前店铺还未上线，卡点在运营主体变更</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广州言瑾服装有限公司 — YSS</div>
-          <div class="reason-card-shops">麒麟月报每月有推送，另外客户对订单云充值消耗了太多费用，比较不满意，拒绝其他收费项</div>
-        </div>
+      <div class="interest-cards">
+        <div class="interest-card ic-yes"><div class="ic-value">42</div><div class="ic-label">感兴趣（是）</div></div>
+        <div class="interest-card ic-no"><div class="ic-value">8</div><div class="ic-label">不感兴趣（否）</div></div>
+        <div class="interest-card ic-pending"><div class="ic-value">291</div><div class="ic-label">客户暂未反馈</div></div>
       </div>
-      <div class="reason-group">
-        <div class="reason-group-title">内部推进困难 / 老板不重视<span class="reason-group-count">3 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海漾澄电子商务有限公司 — 澄渔高定Charmyo（2 条记录）</div>
-          <div class="reason-card-shops">员工不太配合微盟侧的业务，老板也不太重视，销售表示客户方在拓展其他业务，小程序业务暂时搁置，顾不上</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海素然服饰有限公司 — An Ko Rau Adventure</div>
-          <div class="reason-card-shops">间接性活动报名业务，ai相关的暂时不考虑，这类ai相关的内容都需要it部门去评估</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">有自有工具 / 不接受付费AI<span class="reason-group-count">2 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">首威贸易（深圳）有限公司 — 2 个店铺</div>
-          <div class="reason-card-shops"><strong>2000032256560、SW首威购</strong> — 客户有自己运营的工具和方式，暂时不接受付费ai工具</div>
-        </div>
-      </div>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #fdcb6e;">感兴趣但暂无增购意愿 / 待定（18 家）</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">无预算 / 预算紧张<span class="reason-group-count">10 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">杭州云启嘻嘻网络科技有限公司 — 嘻嘻生活</div>
-          <div class="reason-card-shops">感兴趣场景：faq知识库、月度经营报告、店铺装修</div>
-          <div class="reason-card-detail">不增购原因：老板不给预算，项目还没盈利</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">上海昌寰纺织品科技有限公司 — 美的丝</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、店铺装修、作图/视频能力</div>
-          <div class="reason-card-detail">不增购原因：台湾企业业务模式比较传统，老板的接受度不高，且没有新增项目预算</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">苏州正合悦盛服装有限公司 — 正合悦盛服装</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告、商家文案内容素材生产</div>
-          <div class="reason-card-detail">不增购原因：不需要多维度数据，只是做下单订货工具，有资金流水数据和万里牛的数据够用</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">上海畅所服饰有限公司 — 不急户外赛事系列</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、店铺装修</div>
-          <div class="reason-card-detail">不增购原因：阶段性的系统使用，暂时用不上</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">江苏万金宝创意科技有限公司 — 巴苏简奢眼镜</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、faq知识库、店铺装修</div>
-          <div class="reason-card-detail">不增购原因：其他ai产品也可以辅助产出素材用于种草文章，暂时不考虑付费</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">杭州月步创新科技有限公司 — 多走路商城（2 条记录）</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、店铺装修、faq知识库</div>
-          <div class="reason-card-detail">不增购原因：目前续费阶段，老板卡预算，重点投资在达播，微盟侧业务关注度比较低，先体验为主</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">长沙飞鱼医学影像诊断中心有限公司 — 飞鱼影像云店</div>
-          <div class="reason-card-shops">感兴趣场景：faq知识库、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：公司暂无预算，不考虑增购</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">湖南珈瑜商贸有限公司 — 湖南珈瑜官方商城</div>
-          <div class="reason-card-shops">感兴趣场景：faq知识库、店铺装修、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：公司内部有专业的设计团队，对星元的功能需求不是很大，不考虑增购</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">徐州双蒸百年食品科技有限公司 — 双蒸甄选</div>
-          <div class="reason-card-shops">感兴趣场景：商品定时上下架能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户表示目前的体量暂不会付费</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">葆骊（广州）品牌管理有限公司 — HSPOLY华桑葆骊</div>
-          <div class="reason-card-shops">感兴趣场景：月度经营报告、店铺装修</div>
-          <div class="reason-card-detail">不增购原因：公司是没有这个预算的，不会付费</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">权益金赠送 / 已开通WAI<span class="reason-group-count">4 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">祈燃科技发展（江苏）有限公司 — 4 个店铺</div>
-          <div class="reason-card-shops"><strong>Allume-Feu 阿丽茉、xVESSEL、DEALER STREAK、未使用微商城</strong> — 感兴趣场景：商品定时上下架能力 + 月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：权益金0元赠送开通了1年的wai-高级版</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">非决策人 / 先了解 / 试用中<span class="reason-group-count">4 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">湖南运达酒店管理有限公司 — 运达精选总部</div>
-          <div class="reason-card-shops">感兴趣场景：店铺装修、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户外包了一个设计师做店铺素材设计，后续考虑星元，目前愿意体验一下</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">深圳道博智造控股有限公司 — 深圳5100VIP会员商城</div>
-          <div class="reason-card-shops">感兴趣场景：店铺装修</div>
-          <div class="reason-card-detail">不增购原因：先了解</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">中粮可口可乐饮料（北京）有限公司 — 中粮可口可乐饮料</div>
-          <div class="reason-card-shops">感兴趣场景：商品定时上下架能力、faq知识库</div>
-          <div class="reason-card-detail">不增购原因：实际体验的对接人非决策人</div>
-        </div>
-      </div>
+      <p class="field-note" style="margin-top:8px;">另有44家商户未填写。最大瓶颈：<strong>75.6%（291家）</strong>的已推广商户暂未反馈，需加快后续跟进节奏。</p>
     </div>
 
     <!-- 推广场景统计 -->
@@ -1140,86 +763,96 @@
       </div>
     </div>
 
-    <!-- 客户诉求 & 优化期望 -->
+    <!-- 关键客户诉求 & 优化期望 -->
     <div class="section">
-      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 客户诉求 & 优化期望</div>
-      <p class="field-note" style="margin-bottom:12px;">从 Excel「客户诉求」和「优化期望」字段提取有实质内容的反馈。</p>
-
-      <div class="demand-card">
-        <div class="demand-card-header">祈燃科技发展（江苏）有限公司 — 4 个店铺 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>Allume-Feu 阿丽茉、xVESSEL、DEALER STREAK、未使用微商城 — 均感兴趣场景：商品定时上下架能力 + 月度经营报告，场景均满足诉求
-        </div>
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的商户（4家，均为祈燃科技旗下店铺）</h4>
+        <ul>
+          <li><strong>祈燃科技 — 4个店铺（Allume-Feu/xVESSEL/DEALER STREAK/未使用微商城）：</strong>均感兴趣场景：商品定时上下架能力 + 月度经营报告，场景均满足诉求</li>
+        </ul>
       </div>
-      <div class="demand-card">
-        <div class="demand-card-header">中粮可口可乐饮料（北京）有限公司 — 中粮可口可乐饮料</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>主要体验了分销及积分抵扣等场景通过星元引导配置，客户对效果满意；感兴趣faq知识库和商品定时上下架能力
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">杭州云启嘻嘻网络科技有限公司 — 嘻嘻生活</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>增加智能AI客服的自动回复能力
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">湖南维目视嘉医疗器械有限公司 — 维目视嘉官方商城（总店）</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>感兴趣faq知识库、店铺装修、月度经营报告、商家文案内容素材生产，需再跟进使用情况
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">湖南湘飘天下电子商务有限公司 — 晓莺国选</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>感兴趣店铺装修、作图/视频能力、faq知识库，需再协助测试需求场景是否能满足
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">北京国家大剧院客服中心有限责任公司 — 国家大剧院艺术生活馆</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>试用后反馈，客户内部流程和推进的效率不高
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">福建省旦人投资有限公司 — 旦人养生正品店</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无诉求（今天会议演示，引导测试使用阶段），感兴趣月度经营报告、店铺装修、作图/视频能力、faq知识库、商家文案内容素材生产
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">香港御强有限公司 — Rogaine培健自营商城</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>客户反馈今日时间不便未配合测试，感兴趣商品定时上下架能力、店铺装修、faq知识库
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">株洲麦芽可品牌管理有限公司 — 麦芽可（2 条记录）</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>还需再跟进下使用情况
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">湖南粮易智选农业科技有限公司 — 粮易智选金漫香大米</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>还需再跟进下使用情况
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">百川金瓜聚臻（北京）科技有限公司 — 安享家</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无诉求（已会议演示，引导测试使用阶段）
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">北京数字众智科技有限公司 — 数享生活门店</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>暂无诉求（已会议演示，引导测试使用阶段）
-        </div>
+      <div class="summary-box" style="border-left-color: #00b894; margin-top:16px;">
+        <h4>其他有实质反馈的商户</h4>
+        <ul>
+          <li><strong>中粮可口可乐饮料（北京）— 中粮可口可乐饮料：</strong>主要体验了分销及积分抵扣等场景通过星元引导配置，客户对效果满意；感兴趣faq知识库和商品定时上下架能力</li>
+          <li><strong>杭州云启嘻嘻网络科技 — 嘻嘻生活：</strong>优化期望：增加智能AI客服的自动回复能力</li>
+          <li><strong>湖南维目视嘉医疗器械 — 维目视嘉官方商城：</strong>感兴趣faq知识库、店铺装修、月度经营报告、商家文案内容素材生产，需再跟进使用情况</li>
+          <li><strong>湖南湘飘天下电子商务 — 晓莺国选：</strong>感兴趣店铺装修、作图/视频能力、faq知识库，需再协助测试需求场景是否能满足</li>
+          <li><strong>北京国家大剧院客服中心 — 国家大剧院艺术生活馆：</strong>试用后反馈，客户内部流程和推进效率不高</li>
+          <li><strong>福建省旦人投资 — 旦人养生正品店：</strong>暂无诉求（今天会议演示，引导测试使用阶段），感兴趣月度经营报告、店铺装修、作图/视频能力、faq知识库、商家文案内容素材生产</li>
+          <li><strong>香港御强 — Rogaine培健自营商城：</strong>客户反馈今日时间不便未配合测试，感兴趣商品定时上下架能力、店铺装修、faq知识库</li>
+        </ul>
       </div>
     </div>
 
-    </div>
+        <!-- 不感兴趣原因 -->
+
+      <h4 style="font-size:15px;color:#333;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid #00b894;">不感兴趣原因</h4><div class="reason-tabs-container"><div class="reason-tab-nav"><button class="reason-tab-btn active smb-active" onclick="showReasonTab(this,'ni-smb-0')">客户核心诉求还是倾向于模板市场，需要页面有动态效果符合调性 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-smb-1')">公司要求是接口对接解决商品同步问题，装修有美工复用素材，目前店铺还未上线，卡点在运营主体变更 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-smb-2')">麒麟月报每月有推送，另外客户对订单云充值消耗了太多费用，比较不满意，拒绝其他收费项 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-smb-3')">员工不太配合微盟侧的业务，老板也不太重视，销售表示客户方在拓展其他业务，小程序业务暂时搁置，顾不上 2家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-smb-4')">间接性活动报名业务，ai相关的暂时不考虑，这类ai相关的内容都需要it部门去评估 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-smb-5')">客户有自己运营的工具和方式，暂时不接受付费ai工具 2家</button></div><div class="reason-tab-panel active" id="ni-smb-0"><div class="reason-card">
+          <div class="reason-card-header">上海诗意雅薇网络科技有限公司 — CUBIC</div>
+          <div class="reason-card-shops">客户核心诉求还是倾向于模板市场，需要页面有动态效果符合调性</div>
+        </div></div><div class="reason-tab-panel " id="ni-smb-1"><div class="reason-card">
+          <div class="reason-card-header">杭州智局科技有限公司 — 裹裹优选</div>
+          <div class="reason-card-shops">公司要求是接口对接解决商品同步问题，装修有美工复用素材，目前店铺还未上线，卡点在运营主体变更</div>
+        </div></div><div class="reason-tab-panel " id="ni-smb-2"><div class="reason-card">
+          <div class="reason-card-header">广州言瑾服装有限公司 — YSS</div>
+          <div class="reason-card-shops">麒麟月报每月有推送，另外客户对订单云充值消耗了太多费用，比较不满意，拒绝其他收费项</div>
+        </div></div><div class="reason-tab-panel " id="ni-smb-3"><div class="reason-card">
+          <div class="reason-card-header">上海漾澄电子商务有限公司 — 澄渔高定Charmyo</div>
+          <div class="reason-card-shops">员工不太配合微盟侧的业务，老板也不太重视，销售表示客户方在拓展其他业务，小程序业务暂时搁置，顾不上</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">上海漾澄电子商务有限公司 — 澄渔高定Charmyo</div>
+          <div class="reason-card-shops">员工不太配合微盟侧的业务，老板也不太重视，销售表示客户方在拓展其他业务，小程序业务暂时搁置，顾不上</div>
+        </div></div><div class="reason-tab-panel " id="ni-smb-4"><div class="reason-card">
+          <div class="reason-card-header">上海素然服饰有限公司 — An Ko Rau Adventure</div>
+          <div class="reason-card-shops">间接性活动报名业务，ai相关的暂时不考虑，这类ai相关的内容都需要it部门去评估</div>
+        </div></div><div class="reason-tab-panel " id="ni-smb-5"><div class="reason-card">
+          <div class="reason-card-header">首威贸易（深圳）有限公司 — 2000032256560</div>
+          <div class="reason-card-shops">客户有自己运营的工具和方式，暂时不接受付费ai工具</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">首威贸易（深圳）有限公司 — SW首威购</div>
+          <div class="reason-card-shops">客户有自己运营的工具和方式，暂时不接受付费ai工具</div>
+        </div></div></div></div>
+      <h4 style="font-size:15px;color:#333;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid #fdcb6e;">感兴趣但暂无增购意愿 / 待定（13 家）</h4><div class="reason-tabs-container"><div class="reason-tab-nav"><button class="reason-tab-btn active smb2-active" onclick="showReasonTab(this,'np-smb2-0')">老板不给预算，项目还没盈利 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-1')">台湾企业业务模式比较传统，老板的接受度不高，且没有新增项目预算 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-2')">不需要多维度数据，只是做下单订货工具，有资金流水数据和万里牛的数据够用 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-3')">阶段性的系统使用，暂时用不上 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-4')">其他ai产品也可以辅助产出素材用于种草文章，暂时不考虑付费 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-5')">目前续费阶段，老板卡预算，重点投资在达播，微盟侧业务关注度比较低，先体验为主 2家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-6')">公司暂无预算，不考虑增购 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-7')">公司内部有专业的设计团队，对星元的功能需求不是很大，不考虑增购 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-8')">先了解 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-9')">实际体验的对接人非决策人 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-10')">客户表示目前的体量暂不会付费 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'np-smb2-11')">公司是没有这个预算的，不会付费 1家</button></div><div class="reason-tab-panel active" id="np-smb2-0"><div class="reason-card no-purchase">
+          <div class="reason-card-header">杭州云启嘻嘻网络科技有限公司 — 嘻嘻生活</div>
+          <div class="reason-card-shops">老板不给预算，项目还没盈利</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-1"><div class="reason-card no-purchase">
+          <div class="reason-card-header">上海昌寰纺织品科技有限公司 — 美的丝</div>
+          <div class="reason-card-shops">台湾企业业务模式比较传统，老板的接受度不高，且没有新增项目预算</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-2"><div class="reason-card no-purchase">
+          <div class="reason-card-header">苏州正合悦盛服装有限公司 — 正合悦盛服装</div>
+          <div class="reason-card-shops">不需要多维度数据，只是做下单订货工具，有资金流水数据和万里牛的数据够用</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-3"><div class="reason-card no-purchase">
+          <div class="reason-card-header">上海畅所服饰有限公司 — 不急户外赛事系列</div>
+          <div class="reason-card-shops">阶段性的系统使用，暂时用不上</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-4"><div class="reason-card no-purchase">
+          <div class="reason-card-header">江苏万金宝创意科技有限公司 — 巴苏简奢眼镜</div>
+          <div class="reason-card-shops">其他ai产品也可以辅助产出素材用于种草文章，暂时不考虑付费</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-5"><div class="reason-card no-purchase">
+          <div class="reason-card-header">杭州月步创新科技有限公司 — 多走路商城</div>
+          <div class="reason-card-shops">目前续费阶段，老板卡预算，重点投资在达播，微盟侧业务关注度比较低，先体验为主</div>
+        </div><div class="reason-card no-purchase">
+          <div class="reason-card-header">杭州月步创新科技有限公司 — 多走路商城</div>
+          <div class="reason-card-shops">目前续费阶段，老板卡预算，重点投资在达播，微盟侧业务关注度比较低，先体验为主</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-6"><div class="reason-card no-purchase">
+          <div class="reason-card-header">长沙飞鱼医学影像诊断中心有限公司 — 飞鱼影像云店</div>
+          <div class="reason-card-shops">公司暂无预算，不考虑增购</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-7"><div class="reason-card no-purchase">
+          <div class="reason-card-header">湖南珈瑜商贸有限公司 — 湖南珈瑜官方商城</div>
+          <div class="reason-card-shops">公司内部有专业的设计团队，对星元的功能需求不是很大，不考虑增购</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-8"><div class="reason-card no-purchase">
+          <div class="reason-card-header">深圳道博智造控股有限公司 — 深圳5100VIP会员商城</div>
+          <div class="reason-card-shops">先了解</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-9"><div class="reason-card no-purchase">
+          <div class="reason-card-header">中粮可口可乐饮料（北京）有限公司 — 中粮可口可乐饮料</div>
+          <div class="reason-card-shops">实际体验的对接人非决策人</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-10"><div class="reason-card no-purchase">
+          <div class="reason-card-header">徐州双蒸百年食品科技有限公司 — 双蒸甄选</div>
+          <div class="reason-card-shops">客户表示目前的体量暂不会付费</div>
+        </div></div><div class="reason-tab-panel " id="np-smb2-11"><div class="reason-card no-purchase">
+          <div class="reason-card-header">葆骊（广州）品牌管理有限公司 — HSPOLY华桑葆骊</div>
+          <div class="reason-card-shops">公司是没有这个预算的，不会付费</div>
+        </div></div></div></div>
   </div>
 
   <!-- ============================== -->
@@ -1257,174 +890,12 @@
           <span class="stage-right"><span class="stage-value">73</span><span class="stage-percent">45.1%</span></span>
         </div>
       </div>
-    </div>
-
-    <!-- 商户感兴趣情况 -->
-    <div class="section">
-      <div class="section-title general"><span class="icon">通用</span>通用运营 — 商户感兴趣情况</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广的 162 家商户的反馈情况</p>
-      <table class="interest-dist-table">
-        <thead>
-          <tr><th>反馈类型</th><th class="num">商户数</th><th class="num">占比</th><th>分布</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="badge badge-yes">感兴趣（是）</span></td>
-            <td class="num">84</td>
-            <td class="num"><strong>51.9%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill yes" style="width:51.9%"></div><span class="dist-bar-label">84家</span></div></div></td>
-          </tr>
-          <tr>
-            <td><span class="badge badge-no">不感兴趣（否）</span></td>
-            <td class="num">73</td>
-            <td class="num"><strong>45.1%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill no" style="width:45.1%"></div><span class="dist-bar-label">73家</span></div></div></td>
-          </tr>
-          <tr>
-            <td>客户暂未反馈</td>
-            <td class="num">3</td>
-            <td class="num"><strong>1.9%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill pending" style="width:1.9%"></div><span class="dist-bar-label">3家</span></div></div></td>
-          </tr>
-          <tr>
-            <td>未填写</td>
-            <td class="num">2</td>
-            <td class="num"><strong>1.2%</strong></td>
-            <td><div style="display:flex;align-items:center;gap:8px;"><div class="dist-bar-track"><div class="dist-bar-fill empty" style="width:1.2%"></div><span class="dist-bar-label">2家</span></div></div></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #6c5ce7;">不感兴趣原因</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">时间/精力不足，暂无法体验<span class="reason-group-count">36 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">北京重力聿画影视文化有限公司、北京遵品国际商业发展有限公司、王府饭店有限公司、迈科辉诺医疗器械（北京）有限公司、滴滴出行（北京）网络平台技术有限公司、北京世纪森朗实验仪器有限公司、北京益仁泰营养食品有限公司、是间匠舍（北京）科技有限公司、广州市海珠区极幕贸易店（个体工商户）、广州市兴鼎酒店有限公司、深圳九州恒业会展传媒科技有限公司、广东祈福医院有限公司、北京厚大轩成网络科技有限公司、深圳市成玩具有限公司、北京金色向日葵箱包有限公司、北京市新华书店王府井书店有限责任公司、哈多（北京）科技发展有限公司、北京头雁兴农科技有限公司、北京小专中医诊所有限公司、韶关市依云伴山水健康管理有限公司、深圳市盈州科技有限公司、深圳市又一服饰设计有限公司、西安冠康商贸有限公司、深圳市南头农业发展有限公司、杭州市余杭区人民政府仓前街道办事处、青水肴（杭州）生态农业科技有限公司、浙江臻远乡村发展有限公司、上海泰尔茂格林技术有限公司、杭州归领医疗器械有限公司、小爱吃（杭州）生物科技有限公司、广州市增城区卡叔牛仔服装店、长沙穗城轨道交通有限公司、珂涞耶生物科技（广州）有限公司、广元市皇泽文化旅游发展有限公司、北京天亿旅游有限公司</div>
-          <div class="reason-card-shops">"客户说现在没时间去体验，还没反馈" — 通用运营推广中最突出的共性问题，大量商户表示目前没时间了解和试用，暂未反馈体验结果</div>
-        </div>
+      <div class="interest-cards">
+        <div class="interest-card ic-yes"><div class="ic-value">42</div><div class="ic-label">感兴趣（是）</div></div>
+        <div class="interest-card ic-no"><div class="ic-value">73</div><div class="ic-label">不感兴趣（否）</div></div>
+        <div class="interest-card ic-pending"><div class="ic-value">47</div><div class="ic-label">客户暂未反馈</div></div>
       </div>
-      <div class="reason-group">
-        <div class="reason-group-title">正在测试 / 体验中，待看效果<span class="reason-group-count">18 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">四川中农智慧农业开发有限公司、中国对外贸易广州物业有限公司、广州羊城食品有限公司、广州市乐龄星创娱乐文化传媒有限公司、广州握富交互信息科技有限公司、安诚医疗服务（广州）有限公司、广州安擎生物科技有限公司、杨新庆、北京皓溶生物科技有限公司、广州锦途再生资源回收商行（个人独资）、深圳许多福珠宝有限公司</div>
-          <div class="reason-card-shops">"测试中，需要测试看实际效果" / "目前测试阶段" / "客户正在试用，还需要多次尝试再给反馈" — 商户处于体验阶段，尚未形成明确反馈</div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">价格敏感 / 无预算 / 认为应免费<span class="reason-group-count">8 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">长沙星城云集电子商务有限公司 — 后期需要成本，更倾向免费的AI工具</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广州亨享智能科技有限公司 — 否，能一直免费</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广州市乐龄星创娱乐文化传媒有限公司 — 价格问题，认为应该免费</div>
-          <div class="reason-card-shops">听到现在免费后面会收费十分抵触，询问了价格，就说自己用workbuddy就好，并说千万不要给他每月自动扣费</div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">杭州市余杭区人民政府仓前街道办事处 — 对价格很敏感，没有预算</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">青水肴（杭州）生态农业科技有限公司 — 考虑成本问题</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">浙江臻远乡村发展有限公司 — 暂时没有增购计划</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海泰尔茂格林技术有限公司 — 对价格很敏感，没有预算</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">杭州归领医疗器械有限公司 — 对价格很敏感，没有预算</div>
-          <div class="reason-card-shops"></div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">业务需求简单，暂无额外需求<span class="reason-group-count">5 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">上海同上医道贸易有限公司 — 只做微盟直播，有自己的运营负责人</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">湖南润景水业有限公司 — 活动需要遵循公司统一策划，无法自定义</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">湖南慧盼医疗科技有限公司 — 最近生意不是很好，主要是渠道的问题，清楚原因点，不需要星元协助</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">长沙万事可爱科技有限公司 — 商城目前只是给老客户下单的渠道，暂无其他需求</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">湖南一家农业发展有限公司 — 刚更换运营经理，目前比较忙，这个板块往后再聊</div>
-          <div class="reason-card-shops"></div>
-        </div>
-      </div>
-      <div class="reason-group">
-        <div class="reason-group-title">其他原因<span class="reason-group-count">6 家</span></div>
-        <div class="reason-card">
-          <div class="reason-card-header">湖南乡乡嘴食品有限公司 — 系统只做积分兑换，暂无其他需求</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广东华贸医疗器械有限公司 — 否，继续看看其他的功能</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">安诚医疗服务（广州）有限公司 — 每月不定时需导出分销数据进行统计，已做好数据分析标签让协助导出表格但无法实现，认为应该做到能控制系统</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">广州安擎生物科技有限公司 — 能智能文案创作，根据指令进行数据分析</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">北京畅和讯达汽车救援技术开发有限公司 — 根据提示需求自动修改图片上的文字内容</div>
-          <div class="reason-card-shops"></div>
-        </div>
-        <div class="reason-card">
-          <div class="reason-card-header">深圳市成玩具有限公司 — 批量调整商详内容</div>
-          <div class="reason-card-shops"></div>
-        </div>
-      </div>
-
-      <h4 style="font-size:15px; color:#333; margin:20px 0 12px; padding-bottom:8px; border-bottom:2px solid #fdcb6e;">感兴趣但暂无增购意愿 / 待定（5 家）</h4>
-      <div class="reason-group">
-        <div class="reason-group-title">试用中，待多次尝试后反馈<span class="reason-group-count">5 家</span></div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">上海佳农奥德冠食品有限公司</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户正在试用，还需要多次尝试再给反馈</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">稼珑植保科技（上海）有限公司</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户正在试用，还需要多次尝试再给反馈</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">上海建科检验检测认证有限公司</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户正在试用，还需要多次尝试再给反馈</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">北京皓溶生物科技有限公司</div>
-          <div class="reason-card-shops">感兴趣场景：作图/视频能力、月度经营报告</div>
-          <div class="reason-card-detail">不增购原因：客户正在试用，还需要多次尝试再给反馈</div>
-        </div>
-        <div class="reason-card no-purchase">
-          <div class="reason-card-header">广州锦途再生资源回收商行（个人独资）</div>
-          <div class="reason-card-shops">感兴趣场景：店铺装修</div>
-          <div class="reason-card-detail">不增购原因：目前测试阶段，看看实际使用效果再说</div>
-        </div>
-      </div>
+      <p class="field-note" style="margin-top:8px;">通用运营共推广162家（100%覆盖），但<strong>感兴趣率仅25.9%</strong>，不感兴趣率达45.1%，是三个部门中不感兴趣比例最高的。增购意愿仅1家。</p>
     </div>
 
     <!-- 推广场景统计 -->
@@ -1493,91 +964,252 @@
       </div>
     </div>
 
-    <!-- 客户诉求 & 优化期望 -->
+    <!-- 关键客户诉求 & 优化期望 -->
     <div class="section">
-      <div class="section-title general"><span class="icon">通用</span>通用运营 — 客户诉求 & 优化期望</div>
-      <p class="field-note" style="margin-bottom:12px;">从 Excel「客户诉求」和「优化期望」字段提取有实质内容的反馈。</p>
-
-      <div class="demand-card">
-        <div class="demand-card-header">北京慈铭守人企业管理有限公司 <span class="demand-card-tag demand-tag-purchase">增购=是</span></div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>感兴趣场景：移动端经营分析。增购意愿=是，场景满足诉求，暂无优化期望
-        </div>
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 关键客户诉求 & 优化期望</div>
+      <div class="summary-box">
+        <h4>有增购意愿的商户（1家）</h4>
+        <ul>
+          <li><strong>北京慈铭守人企业管理：</strong>感兴趣场景：移动端经营分析。增购意愿=是，场景满足诉求，暂无优化期望</li>
+        </ul>
       </div>
-      <div class="demand-card">
-        <div class="demand-card-header">广州普生正心堂健康药房有限公司 — 肥圆萌宠</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>增加指定商品分组商品应用
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">新蛋商贸（上海）有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>可以根据门店来做业务对账
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">北京畅和讯达汽车救援技术开发有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>根据提示需求自动修改图片上的文字内容
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">广州安擎生物科技有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>能智能文案创作，根据指令进行数据分析
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">深圳市成玩具有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>批量调整商详内容
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">韶关市依云伴山水健康管理有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>智能文案创作，图文修改
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">广州市乐龄星创娱乐文化传媒有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>认为应免费使用，听到现在免费后面会收费十分抵触，询问了价格，就说自己用workbuddy就好，并说千万不要给他每月自动扣费
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">安诚医疗服务（广州）有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-demand">客户诉求</span>每月不定时需导出分销数据进行统计，已做好数据分析标签，让协助导出表格但无法实现，认为应该做到能控制系统
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">上海佳农奥德冠食品有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂无，自己摸索
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">稼珑植保科技（上海）有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂无
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">上海建科检验检测认证有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>暂无
-        </div>
-      </div>
-      <div class="demand-card">
-        <div class="demand-card-header">湖南虫管家生物科技有限公司</div>
-        <div class="demand-card-content">
-          <span class="demand-card-tag demand-tag-optimize">优化期望</span>要自己测试下，已经告诉客户操作路径
-        </div>
+      <div class="summary-box" style="border-left-color: #6c5ce7; margin-top:16px;">
+        <h4>有实质诉求的商户</h4>
+        <ul>
+          <li><strong>广州普生正心堂健康药房 — 肥圆萌宠：</strong>增加指定商品分组商品应用</li>
+          <li><strong>新蛋商贸（上海）：</strong>可以根据门店来做业务对账</li>
+          <li><strong>北京畅和讯达汽车救援技术开发：</strong>根据提示需求自动修改图片上的文字内容</li>
+          <li><strong>广州安擎生物科技：</strong>能智能文案创作，根据指令进行数据分析</li>
+          <li><strong>深圳市成玩玩具有限公司：</strong>批量调整商详内容</li>
+          <li><strong>韶关市依云伴山水健康管理：</strong>智能文案创作，图文修改</li>
+          <li><strong>广州市乐龄星创娱乐文化传媒：</strong>认为应免费使用，听到后面会收费十分抵触，千万不要给他自动扣费</li>
+          <li><strong>安诚医疗服务（广州）：</strong>每月不定时需导出分销数据进行统计，已做好数据分析标签，让协助导出表格但无法实现，认为应该做到能控制系统</li>
+        </ul>
       </div>
     </div>
 
+        <!-- 不感兴趣原因 -->
+
+      <h4 style="font-size:15px;color:#333;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid #6c5ce7;">不感兴趣原因</h4><div class="reason-tabs-container"><div class="reason-tab-nav"><button class="reason-tab-btn active gen-active" onclick="showReasonTab(this,'ni-gen-0')">只做微盟直播，有自己的运营负责人 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-1')">后期需要成本，更倾向免费的AI工具 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-2')">活动需要遵循公司统一策划，无法自定义 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-3')">最近生意不是很好，主要是渠道的问题，清楚原因点，不需要星元协助 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-4')">商城目前只是给老客户下单的渠道，暂无其他需求 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-5')">刚更换运营经理，目前比较忙，这个板块往后再聊 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-6')">系统只做积分兑换，暂无其他需求 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-7')">客户说现在没时间去体验，还没反馈 56家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-8')">否，能一直免费 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-9')">否，继续看看其他的功能 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-10')">价格问题，认为应该免费 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-11')">自己的需求就一个，每月查看导出数据，自己点两下就好了，现在给出指令下载表格，只是告诉她办法，并没有表格发... 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-12')">对价格很敏感，没有预算 4家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-13')">考虑成本问题 1家</button><button class="reason-tab-btn " onclick="showReasonTab(this,'ni-gen-14')">暂时没有增购计划 1家</button></div><div class="reason-tab-panel active" id="ni-gen-0"><div class="reason-card">
+          <div class="reason-card-header">上海同上医道贸易有限公司</div>
+          <div class="reason-card-shops">只做微盟直播，有自己的运营负责人</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-1"><div class="reason-card">
+          <div class="reason-card-header">长沙星城云集电子商务有限公司</div>
+          <div class="reason-card-shops">后期需要成本，更倾向免费的AI工具</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-2"><div class="reason-card">
+          <div class="reason-card-header">湖南润景水业有限公司</div>
+          <div class="reason-card-shops">活动需要遵循公司统一策划，无法自定义</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-3"><div class="reason-card">
+          <div class="reason-card-header">湖南慧盼医疗科技有限公司</div>
+          <div class="reason-card-shops">最近生意不是很好，主要是渠道的问题，清楚原因点，不需要星元协助</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-4"><div class="reason-card">
+          <div class="reason-card-header">长沙万事可爱科技有限公司</div>
+          <div class="reason-card-shops">商城目前只是给老客户下单的渠道，暂无其他需求</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-5"><div class="reason-card">
+          <div class="reason-card-header">湖南一家农业发展有限公司</div>
+          <div class="reason-card-shops">刚更换运营经理，目前比较忙，这个板块往后再聊</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-6"><div class="reason-card">
+          <div class="reason-card-header">湖南乡乡嘴食品有限公司</div>
+          <div class="reason-card-shops">系统只做积分兑换，暂无其他需求</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-7"><div class="reason-card">
+          <div class="reason-card-header">北京重力聿画影视文化有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京遵品国际商业发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">王府饭店有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">迈科辉诺医疗器械（北京）有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">滴滴出行（北京）网络平台技术有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京世纪森朗实验仪器有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京益仁泰营养食品有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">是间匠舍（北京）科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州市海珠区极幕贸易店（个体工商户）</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州市兴鼎酒店有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州高新物业服务有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广东华茂药业有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳九州恒业会展传媒科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广东祈福医院有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">四川中农智慧农业开发有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">中国对外贸易广州物业有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州羊城食品有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州握富交互信息科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州安擎生物科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">杨新庆</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京厚大轩成网络科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市成玩玩具有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京金色向日葵箱包有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京市新华书店王府井书店有限责任公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">哈多（北京）科技发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京头雁兴农科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京小专中医诊所有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">韶关市依云伴山水健康管理有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市盈州科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市又一服饰设计有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">西安冠康商贸有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳艾菲思生物科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市毛毛虫文化发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳亿体科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳三个零农业科技发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">好美康（深圳）健康科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市南头农业发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州市增城区卡叔牛仔服装店</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">长沙穗城轨道交通有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">珂涞耶生物科技（广州）有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广元市皇泽文化旅游发展有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">中山市大涌镇大芃轻奢制衣厂（个体工商户）</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">广州市白云区黄石蚂蚁美容美发用品中心</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">浙江鑫和食品供应链有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京后浪美育集团有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">杭州金柠檬文化创意有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">三创（杭州）网络科技服务有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">浙江甲行文化创意有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市集美港商贸有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市俏公馆科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳星优选科技有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市银龄时光健康养生有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市金正金珠宝首饰有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市南山区浅藏时光咖啡语茶店</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">深圳市玖屿玖科技文化有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">北京天亿旅游有限公司</div>
+          <div class="reason-card-shops">客户说现在没时间去体验，还没反馈</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-8"><div class="reason-card">
+          <div class="reason-card-header">广州亨享智能科技有限公司</div>
+          <div class="reason-card-shops">否，能一直免费</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-9"><div class="reason-card">
+          <div class="reason-card-header">广东华贸医疗器械有限公司</div>
+          <div class="reason-card-shops">否，继续看看其他的功能</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-10"><div class="reason-card">
+          <div class="reason-card-header">广州市乐龄星创娱乐文化传媒有限公司</div>
+          <div class="reason-card-shops">价格问题，认为应该免费</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-11"><div class="reason-card">
+          <div class="reason-card-header">安诚医疗服务（广州）有限公司</div>
+          <div class="reason-card-shops">自己的需求就一个，每月查看导出数据，自己点两下就好了，现在给出指令下载表格，只是告诉她办法，并没有表格发送给到她，体验感不好</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-12"><div class="reason-card">
+          <div class="reason-card-header">杭州市余杭区人民政府仓前街道办事处</div>
+          <div class="reason-card-shops">对价格很敏感，没有预算</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">上海泰尔茂格林技术有限公司</div>
+          <div class="reason-card-shops">对价格很敏感，没有预算</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">杭州归领医疗器械有限公司</div>
+          <div class="reason-card-shops">对价格很敏感，没有预算</div>
+        </div><div class="reason-card">
+          <div class="reason-card-header">小爱吃（杭州）生物科技有限公司</div>
+          <div class="reason-card-shops">对价格很敏感，没有预算</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-13"><div class="reason-card">
+          <div class="reason-card-header">青水肴（杭州）生态农业科技有限公司</div>
+          <div class="reason-card-shops">考虑成本问题</div>
+        </div></div><div class="reason-tab-panel " id="ni-gen-14"><div class="reason-card">
+          <div class="reason-card-header">浙江臻远乡村发展有限公司</div>
+          <div class="reason-card-shops">暂时没有增购计划</div>
+        </div></div></div></div>
   </div>
 
   <!-- ============================== -->
@@ -1686,5 +1318,23 @@ function switchTab(tabName) {
   document.getElementById('tab-' + tabName).classList.add('active');
 }
 </script>
+  <script>
+    function showReasonTab(btn, panelId) {
+      const container = btn.closest('.reason-tabs-container');
+      container.querySelectorAll('.reason-tab-btn').forEach(b => b.classList.remove('active'));
+      container.querySelectorAll('.reason-tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+  </script>
+  <script>
+    function showReasonTab(btn, panelId) {
+      const container = btn.closest('.reason-tabs-container');
+      container.querySelectorAll('.reason-tab-btn').forEach(b => b.classList.remove('active'));
+      container.querySelectorAll('.reason-tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
