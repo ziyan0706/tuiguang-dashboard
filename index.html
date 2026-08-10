@@ -281,7 +281,6 @@
   }
 
   .quality-warn { display: inline-block; width: 15px; height: 15px; line-height: 15px; text-align: center; background: #e74c3c; color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; margin-left: 3px; vertical-align: middle; cursor: help; }
-  .buy-two-col { display: grid; grid-template-columns: 1fr 260px; gap: 20px; align-items: start; }
   .buy-merchant-col { padding-top: 20px; }
   .merchant-list-box { background: #fef9f3; border-radius: 10px; padding: 16px; border: 1px solid #f0e0c8; height: 100%; }
   .merchant-list-title { font-size: 13px; font-weight: 600; color: #e17055; margin-bottom: 10px; }
@@ -398,7 +397,7 @@
     </div>
   </div>
 
-                  <!-- Tabs -->
+                    <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -585,7 +584,7 @@
     <!-- 6. 增购意愿分布 -->
     <div class="section">
       <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 增购意愿分布（已推广 124 家）</div>
-      <div class="two-col buy-two-col">
+      <div class="two-col satisfy-two-col">
         <div>
           <table class="data-table">
             <thead><tr><th>增购意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
@@ -840,7 +839,7 @@
     <!-- 6. 增购意愿分布 -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 增购意愿分布（已推广 349 家）</div>
-      <div class="two-col buy-two-col">
+      <div class="two-col satisfy-two-col">
         <div>
           <table class="data-table">
             <thead><tr><th>增购意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
@@ -1163,7 +1162,7 @@
     <!-- 6. 增购意愿分布 -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 增购意愿分布（已推广 161 家）</div>
-      <div class="two-col buy-two-col">
+      <div class="two-col satisfy-two-col">
         <div>
           <table class="data-table">
             <thead><tr><th>增购意愿</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
@@ -1382,8 +1381,8 @@
   .norep-stat .ns-label { display:block; font-size:12px; color:#777; margin-top:6px; }
   .satno-table { margin:0; }
   .satno-table th, .satno-table td { font-size:13px; vertical-align:top; }
-  /* 满足诉求两栏布局：左侧紧凑表格 + 右侧宽商户列表 */
-  .satisfy-two-col { display: grid; grid-template-columns: minmax(0,380px) 1fr; gap: 24px; align-items: start; }
+  /* 满足诉求 / 增购意愿 两栏布局：左数据表 + 右内容，左右平分 */
+  .satisfy-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
   @media(max-width:768px){ .satisfy-two-col { grid-template-columns: 1fr; } }
   .tab-content[id$="-smb"] .cat-tab-btn.active,
   .tab-content[id$="-smb"] .cat-tab-btn.active { background:#00b894; border-color:#00b894; }
