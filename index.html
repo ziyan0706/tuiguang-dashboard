@@ -400,7 +400,7 @@
     </div>
   </div>
 
-                        <!-- Tabs -->
+                          <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -515,8 +515,8 @@
       <div class="summary-box">
         <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
         <ul>
-          <li><strong>商户自身运营投入不足（10家）：</strong>小程序仅做展示、员工内购无运营需求、未配备专职运营团队等</li>
-          <li><strong>已推送但客户暂未反馈（5家）：</strong>已发送资料/演示，客户暂未回复或表示先看看</li>
+          <li><strong>已推送但客户暂未反馈（7家）：</strong>已发送资料/演示，客户暂未回复或表示先看看 <span class="quality-warn" title="⚠ 该分类下内容多为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+          <li><strong>商户自身运营投入不足（8家）：</strong>小程序仅做展示、员工内购无运营需求、未配备专职运营团队等</li>
           <li><strong>功能/需求不匹配（2家）：</strong>需求为系统暂不支持的能力（如定时、接口对接、模板等）</li>
           <li><strong>预算/付费顾虑（1家）：</strong>对充值/消耗费用不满或无额外预算</li>
           <li><strong>内部推进困难（2家）：</strong>老板不重视、人手不足、员工不配合推进</li>
@@ -524,8 +524,8 @@
         </ul>
       </div>
       <div class="cat-tabs" id="cattabs-行业">
-        <button class="cat-tab-btn active" onclick="switchCat('行业',0)">商户自身运营投入不足（10）</button>
-        <button class="cat-tab-btn " onclick="switchCat('行业',1)">已推送但客户暂未反馈（5）</button>
+        <button class="cat-tab-btn active" onclick="switchCat('行业',0)">已推送但客户暂未反馈（7）</button>
+        <button class="cat-tab-btn " onclick="switchCat('行业',1)">商户自身运营投入不足（8）</button>
         <button class="cat-tab-btn " onclick="switchCat('行业',2)">功能/需求不匹配（2）</button>
         <button class="cat-tab-btn " onclick="switchCat('行业',3)">预算/付费顾虑（1）</button>
         <button class="cat-tab-btn " onclick="switchCat('行业',4)">内部推进困难（2）</button>
@@ -533,6 +533,20 @@
       </div>
       <div class="cat-panels">
         <div class="cat-panel active" id="cat-行业-0">
+          <ul class="merchant-list-fl">
+            <li><strong>统一美研社</strong>：已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。
+客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>镰仓衬衫</strong>：已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>宝路易商城</strong>：已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>邮政菜单</strong>：推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>蓝棠博步</strong>：已发送操作指南及产品说明，客户未回复，过两天再沟通问问。
+客户小程序只做展示不运营，对付费及运营相关均不感兴趣。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>三只小山羊</strong>：已发送操作指南及产品说明，客户未回复。
+客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+            <li><strong>COTEMP</strong>：基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算） <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="cat-行业-1">
           <ul class="merchant-list-fl">
             <li><strong>NOBIS</strong>：仅做官网展示，没有日常运营需求。</li>
             <li><strong>歌力思男装</strong>：仅做官网展示，没有日常运营需求。</li>
@@ -542,20 +556,6 @@
             <li><strong>帕拉丁</strong>：品牌商城定位员工内购，日常基本无运营，货品上架是第三方全平台一起上架，无需运营处理</li>
             <li><strong>K/Swiss</strong>：品牌商城定位员工内购，日常基本无运营，无需求</li>
             <li><strong>迈乐</strong>：品牌商城定位员工内购，日常基本无运营，无需求</li>
-            <li><strong>统一美研社</strong>：已发送操作指南和产品说明，客户暂未给到感兴趣点相关回复。
-客户小程序内购使用，拒绝私聊添加好友，所有信息均让群内沟通。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-            <li><strong>蓝棠博步</strong>：已发送操作指南及产品说明，客户未回复，过两天再沟通问问。
-客户小程序只做展示不运营，对付费及运营相关均不感兴趣。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-          </ul>
-        </div>
-        <div class="cat-panel " id="cat-行业-1">
-          <ul class="merchant-list-fl">
-            <li><strong>镰仓衬衫</strong>：已发送重点模块及操作指南、产品介绍，客户回复先看看，有需要再联系。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-            <li><strong>宝路易商城</strong>：已发送重点模块及操作指南、产品介绍，客户回复“好的”先看看，过两天再问下进展。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-            <li><strong>邮政菜单</strong>：推广后商家无回复和反馈，整体商城的业绩持续下滑，商户之前有表示过无额外预算。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-            <li><strong>三只小山羊</strong>：已发送操作指南及产品说明，客户未回复。
-客户无私域专职团队，电商兼职，目前小程序只承接线下预定单，不做其他运营。 <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
-            <li><strong>COTEMP</strong>：基于几个重点场景给到客户说明，并提供操作指南及产品说明，客户未回复。（之前线下客户有说明需付费产品内部无预算） <span class="quality-warn" title="⚠ 填写内容逻辑有误：该内容为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
           </ul>
         </div>
         <div class="cat-panel " id="cat-行业-2">
@@ -1058,7 +1058,7 @@
       <div class="summary-box">
         <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
         <ul>
-          <li><strong>已推送但客户暂未反馈（55家）：</strong>已发送资料/演示，客户暂未回复或表示先看看</li>
+          <li><strong>已推送但客户暂未反馈（55家）：</strong>已发送资料/演示，客户暂未回复或表示先看看 <span class="quality-warn" title="⚠ 该分类下内容多为沟通进度描述，并非商户真实的不感兴趣原因">!</span></li>
           <li><strong>功能/需求不匹配（4家）：</strong>需求为系统暂不支持的能力（如定时、接口对接、模板等）</li>
           <li><strong>预算/付费顾虑（7家）：</strong>对充值/消耗费用不满或无额外预算</li>
           <li><strong>其他（6家）：</strong>其他未归类原因</li>
