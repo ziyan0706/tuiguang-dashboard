@@ -398,7 +398,7 @@
     </div>
   </div>
 
-          <!-- Tabs -->
+            <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -472,7 +472,71 @@
       </div>
     </div>
 
-    <!-- 4. 不感兴趣原因分析（归纳分类 + Tab切换） -->
+    <!-- 4. 感兴趣场景是否满足诉求 -->
+    <div class="section">
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 感兴趣场景是否满足诉求（感兴趣商户 91家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">41</td><td class="num">45.1%</td></tr>
+              <tr><td>否</td><td class="num">4</td><td class="num">4.4%</td></tr>
+              <tr><td>未填写</td><td class="num">46</td><td class="num">50.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="buy-merchant-col">
+          <div class="merchant-list-box">
+            <div class="merchant-list-title">📌 满足诉求「否」的商户（4家）</div>
+            <div class="merchant-list">
+                <div class="merchant-item">资生堂丽源化妆品有限公司</div>
+                <div class="merchant-item">上海逸刻新零售网络科技有限公司</div>
+                <div class="merchant-item">苏州智尚信息技术有限公司</div>
+                <div class="merchant-item">福建紫色花语集团有限公司</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 感兴趣但无增购意愿原因分析（归纳分类 + Tab切换） -->
+    <div class="section">
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 感兴趣但无增购意愿原因分析（8家）</div>
+      <div class="summary-box">
+        <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
+        <ul>
+          <li><strong>决策权限不足/对接人非决策（4家）：</strong>对接人仅为使用方、无采购决策权，需向上或代运营评估</li>
+          <li><strong>预算/付费顾虑（4家）：</strong>无预算、老板卡预算、不付费或费用价值尚待评估</li>
+        </ul>
+      </div>
+      <div class="cat-tabs" id="noreptabs-行业">
+        <button class="cat-tab-btn active" onclick="switchNoRep('行业',0)">决策权限不足/对接人非决策（4）</button>
+        <button class="cat-tab-btn " onclick="switchNoRep('行业',1)">预算/付费顾虑（4）</button>
+      </div>
+      <div class="cat-panels">
+        <div class="cat-panel active" id="norep-行业-0">
+          <ul class="merchant-list-fl">
+            <li><strong>腾讯云计算（北京）有限责任公司</strong>：问了报价，但是没有特别说啥，主要是代运营团队，他们采购这块品牌是不出钱的，要代运营评估这个费用价值是否合适，还在测试体验中</li>
+            <li><strong>腾讯云计算（北京）有限责任公司</strong>：问了报价，但是没有特别说啥，主要是代运营团队，他们采购这块品牌是不出钱的，要代运营评估这个费用价值是否合适，还在测试体验中</li>
+            <li><strong>深圳歌力思服饰股份有限公司</strong>：没有预算，需要跟领导申请。</li>
+            <li><strong>资生堂丽源化妆品有限公司</strong>：目前对接的是业务侧实际使用商城后台功能较多的角色，对于产品增购等只有提议权，暂无法判断是否可以增购。
+后续约IT以及业务部门领导会议推广。</li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="norep-行业-1">
+          <ul class="merchant-list-fl">
+            <li><strong>来酷科技有限公司</strong>：暂无预算</li>
+            <li><strong>广东华信雅迪斯时装有限公司</strong>：客户暂无多的预算，先使用一段时间</li>
+            <li><strong>福建柒牌时装科技股份有限公司</strong>：无预算：受线索运营今年取消无限量，续费金额翻10倍，客户预算缩紧</li>
+            <li><strong>杭州皓峰电子商务有限公司</strong>：公司经营困难（已经发不出工资了），没有预算</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 不感兴趣原因分析（21家）</div>
       <div class="summary-box">
@@ -483,7 +547,7 @@
           <li><strong>功能/需求不匹配（2家）：</strong>需求为系统暂不支持的能力（如定时、接口对接、模板等）</li>
           <li><strong>预算/付费顾虑（1家）：</strong>对充值/消耗费用不满或无额外预算</li>
           <li><strong>内部推进困难（2家）：</strong>老板不重视、人手不足、员工不配合推进</li>
-          <li><strong>观望/评估中（1家）：</strong>需IT评估、自己有运营工具、暂不接受付费AI</li>
+          <li><strong>已购同类产品/观望中（1家）：</strong>需IT评估、自己有运营工具、暂不接受付费AI、已购同类产品</li>
         </ul>
       </div>
       <div class="cat-tabs" id="cattabs-行业">
@@ -492,7 +556,7 @@
         <button class="cat-tab-btn " onclick="switchCat('行业',2)">功能/需求不匹配（2）</button>
         <button class="cat-tab-btn " onclick="switchCat('行业',3)">预算/付费顾虑（1）</button>
         <button class="cat-tab-btn " onclick="switchCat('行业',4)">内部推进困难（2）</button>
-        <button class="cat-tab-btn " onclick="switchCat('行业',5)">观望/评估中（1）</button>
+        <button class="cat-tab-btn " onclick="switchCat('行业',5)">已购同类产品/观望中（1）</button>
       </div>
       <div class="cat-panels">
         <div class="cat-panel active" id="cat-行业-0">
@@ -547,36 +611,7 @@
       </div>
     </div>
 
-    <!-- 5. 感兴趣场景是否满足诉求 -->
-    <div class="section">
-      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 感兴趣场景是否满足诉求（感兴趣商户 91家）</div>
-      <div class="two-col buy-two-col">
-        <div>
-          <table class="data-table">
-            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-            <tbody>
-              <tr><td>是</td><td class="num">41</td><td class="num">45.1%</td></tr>
-              <tr><td>否</td><td class="num">4</td><td class="num">4.4%</td></tr>
-              <tr><td>未填写</td><td class="num">46</td><td class="num">50.5%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="buy-merchant-col">
-          <div class="merchant-list-box">
-            <div class="merchant-list-title">📌 满足诉求「否」的商户（4家）</div>
-            <div class="merchant-list">
-                <div class="merchant-item">资生堂丽源化妆品有限公司</div>
-                <div class="merchant-item">上海逸刻新零售网络科技有限公司</div>
-                <div class="merchant-item">苏州智尚信息技术有限公司</div>
-                <div class="merchant-item">福建紫色花语集团有限公司</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. 增购意愿分布 -->
+    <!-- 7. 增购意愿分布 -->
     <div class="section">
       <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 增购意愿分布</div>
       <div class="two-col buy-two-col">
@@ -606,7 +641,7 @@
       </div>
     </div>
 
-    <!-- 7. 客户诉求 & 优化期望 -->
+    <!-- 8. 客户诉求 & 优化期望 -->
     <div class="section">
       <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 客户诉求 &amp; 优化期望</div>
       <p class="field-note" style="margin-bottom:12px;">说明：以下为已推广且表示"感兴趣（是）"的商户中，填写了「客户诉求」或「优化期望」的明细（共 38 家）。数据来源于原始跟进表对应列。</p>
@@ -721,7 +756,82 @@
       </div>
     </div>
 
-    <!-- 4. 不感兴趣原因分析（归纳分类 + Tab切换） -->
+    <!-- 4. 感兴趣场景是否满足诉求 -->
+    <div class="section">
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 感兴趣场景是否满足诉求（感兴趣商户 37家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">26</td><td class="num">70.3%</td></tr>
+              <tr><td>否</td><td class="num">0</td><td class="num">0.0%</td></tr>
+              <tr><td>未填写</td><td class="num">11</td><td class="num">29.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- 5. 感兴趣但无增购意愿原因分析（归纳分类 + Tab切换） -->
+    <div class="section">
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 感兴趣但无增购意愿原因分析（13家）</div>
+      <div class="summary-box">
+        <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
+        <ul>
+          <li><strong>决策权限不足/对接人非决策（1家）：</strong>对接人仅为使用方、无采购决策权，需向上或代运营评估</li>
+          <li><strong>已有替代方案/功能已满足（4家）：</strong>内部已有设计团队、其他AI工具或现有系统（如万里牛）能满足，对星元增购需求弱</li>
+          <li><strong>预算/付费顾虑（6家）：</strong>无预算、老板卡预算、不付费或费用价值尚待评估</li>
+          <li><strong>试用/评估中（观望）（1家）：</strong>正在试用/测试体验中，需多次尝试后再给反馈</li>
+          <li><strong>需求阶段性/暂不需要（1家）：</strong>当前为阶段性使用或暂不需要增购</li>
+        </ul>
+      </div>
+      <div class="cat-tabs" id="noreptabs-SMB">
+        <button class="cat-tab-btn active" onclick="switchNoRep('SMB',0)">决策权限不足/对接人非决策（1）</button>
+        <button class="cat-tab-btn " onclick="switchNoRep('SMB',1)">已有替代方案/功能已满足（4）</button>
+        <button class="cat-tab-btn " onclick="switchNoRep('SMB',2)">预算/付费顾虑（6）</button>
+        <button class="cat-tab-btn " onclick="switchNoRep('SMB',3)">试用/评估中（观望）（1）</button>
+        <button class="cat-tab-btn " onclick="switchNoRep('SMB',4)">需求阶段性/暂不需要（1）</button>
+      </div>
+      <div class="cat-panels">
+        <div class="cat-panel active" id="norep-SMB-0">
+          <ul class="merchant-list-fl">
+            <li><strong>中粮可口可乐饮料（北京）有限公司</strong>：实际体验的对接人非决策人</li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="norep-SMB-1">
+          <ul class="merchant-list-fl">
+            <li><strong>湖南运达酒店管理有限公司</strong>：客户外包了一个设计师做店铺素材设计，后续考虑星元，目前愿意体验一下</li>
+            <li><strong>苏州正合悦盛服装有限公司</strong>：不需要多维度数据，只是做下单订货工具，有资金流水数据和万里牛的数据够用</li>
+            <li><strong>江苏万金宝创意科技有限公司</strong>：其他ai产品也可以辅助产出素材用于种草文章，暂时不考虑付费</li>
+            <li><strong>湖南珈瑜商贸有限公司</strong>：公司内部有专业的设计团队，对星元的功能需求不是很大，不考虑增购</li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="norep-SMB-2">
+          <ul class="merchant-list-fl">
+            <li><strong>杭州云启嘻嘻网络科技有限公司</strong>：老板不给预算，项目还没盈利</li>
+            <li><strong>上海昌寰纺织品科技有限公司</strong>：台湾企业业务模式比较传统，老板的接受度不高，且没有新增项目预算</li>
+            <li><strong>杭州月步创新科技有限公司</strong>：目前续费阶段，老板卡预算，重点投资在达播，微盟侧业务关注度比较低，先体验为主</li>
+            <li><strong>长沙飞鱼医学影像诊断中心有限公司</strong>：公司暂无预算，不考虑增购</li>
+            <li><strong>徐州双蒸百年食品科技有限公司</strong>：客户表示目前的体量暂不会付费</li>
+            <li><strong>葆骊（广州）品牌管理有限公司</strong>：公司是没有这个预算的，不会付费</li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="norep-SMB-3">
+          <ul class="merchant-list-fl">
+            <li><strong>深圳道博智造控股有限公司</strong>：先了解</li>
+          </ul>
+        </div>
+        <div class="cat-panel " id="norep-SMB-4">
+          <ul class="merchant-list-fl">
+            <li><strong>上海畅所服饰有限公司</strong>：阶段性的系统使用，暂时用不上</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 不感兴趣原因分析（6家）</div>
       <div class="summary-box">
@@ -730,14 +840,14 @@
           <li><strong>商户自身运营投入不足（1家）：</strong>小程序仅做展示、员工内购无运营需求、未配备专职运营团队等</li>
           <li><strong>功能/需求不匹配（2家）：</strong>需求为系统暂不支持的能力（如定时、接口对接、模板等）</li>
           <li><strong>预算/付费顾虑（2家）：</strong>对充值/消耗费用不满或无额外预算</li>
-          <li><strong>观望/评估中（1家）：</strong>需IT评估、自己有运营工具、暂不接受付费AI</li>
+          <li><strong>已购同类产品/观望中（1家）：</strong>需IT评估、自己有运营工具、暂不接受付费AI、已购同类产品</li>
         </ul>
       </div>
       <div class="cat-tabs" id="cattabs-SMB">
         <button class="cat-tab-btn active" onclick="switchCat('SMB',0)">商户自身运营投入不足（1）</button>
         <button class="cat-tab-btn " onclick="switchCat('SMB',1)">功能/需求不匹配（2）</button>
         <button class="cat-tab-btn " onclick="switchCat('SMB',2)">预算/付费顾虑（2）</button>
-        <button class="cat-tab-btn " onclick="switchCat('SMB',3)">观望/评估中（1）</button>
+        <button class="cat-tab-btn " onclick="switchCat('SMB',3)">已购同类产品/观望中（1）</button>
       </div>
       <div class="cat-panels">
         <div class="cat-panel active" id="cat-SMB-0">
@@ -765,25 +875,7 @@
       </div>
     </div>
 
-    <!-- 5. 感兴趣场景是否满足诉求 -->
-    <div class="section">
-      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 感兴趣场景是否满足诉求（感兴趣商户 37家）</div>
-      <div class="two-col buy-two-col">
-        <div>
-          <table class="data-table">
-            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-            <tbody>
-              <tr><td>是</td><td class="num">26</td><td class="num">70.3%</td></tr>
-              <tr><td>否</td><td class="num">0</td><td class="num">0.0%</td></tr>
-              <tr><td>未填写</td><td class="num">11</td><td class="num">29.7%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- 6. 增购意愿分布 -->
+    <!-- 7. 增购意愿分布 -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 增购意愿分布</div>
       <div class="two-col buy-two-col">
@@ -810,7 +902,7 @@
       </div>
     </div>
 
-    <!-- 7. 客户诉求 & 优化期望 -->
+    <!-- 8. 客户诉求 & 优化期望 -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 客户诉求 &amp; 优化期望</div>
       <p class="field-note" style="margin-bottom:12px;">说明：以下为已推广且表示"感兴趣（是）"的商户中，填写了「客户诉求」或「优化期望」的明细（共 10 家）。数据来源于原始跟进表对应列。</p>
@@ -895,7 +987,61 @@
       </div>
     </div>
 
-    <!-- 4. 不感兴趣原因分析（归纳分类 + Tab切换） -->
+    <!-- 4. 感兴趣场景是否满足诉求 -->
+    <div class="section">
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 感兴趣场景是否满足诉求（感兴趣商户 42家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">38</td><td class="num">90.5%</td></tr>
+              <tr><td>否</td><td class="num">3</td><td class="num">7.1%</td></tr>
+              <tr><td>未填写</td><td class="num">1</td><td class="num">2.4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="buy-merchant-col">
+          <div class="merchant-list-box">
+            <div class="merchant-list-title">📌 满足诉求「否」的商户（3家）</div>
+            <div class="merchant-list">
+                <div class="merchant-item">广州普生正心堂健康药房有限公司</div>
+                <div class="merchant-item">新蛋商贸（上海）有限公司</div>
+                <div class="merchant-item">北京畅和讯达汽车救援技术开发有限公司</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 感兴趣但无增购意愿原因分析（归纳分类 + Tab切换） -->
+    <div class="section">
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 感兴趣但无增购意愿原因分析（6家）</div>
+      <div class="summary-box">
+        <h4>主要原因归纳（点击下方分类标签查看对应商户明细）</h4>
+        <ul>
+          <li><strong>试用/评估中（观望）（6家）：</strong>正在试用/测试体验中，需多次尝试后再给反馈</li>
+        </ul>
+      </div>
+      <div class="cat-tabs" id="noreptabs-通用">
+        <button class="cat-tab-btn active" onclick="switchNoRep('通用',0)">试用/评估中（观望）（6）</button>
+      </div>
+      <div class="cat-panels">
+        <div class="cat-panel active" id="norep-通用-0">
+          <ul class="merchant-list-fl">
+            <li><strong>上海佳农奥德冠食品有限公司</strong>：客户正在试用，还需要多次尝试再给反馈</li>
+            <li><strong>稼珑植保科技（上海）有限公司</strong>：客户正在试用，还需要多次尝试再给反馈</li>
+            <li><strong>上海建科检验检测认证有限公司</strong>：客户正在试用，还需要多次尝试再给反馈</li>
+            <li><strong>深圳市玖屿玖科技文化有限公司</strong>：目前测试阶段</li>
+            <li><strong>北京皓溶生物科技有限公司</strong>：客户正在试用，还需要多次尝试再给反馈</li>
+            <li><strong>广州锦途再生资源回收商行（个人独资）</strong>：目前测试阶段，看看实际使用效果再说</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 不感兴趣原因分析（归纳分类 + Tab切换） -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 不感兴趣原因分析（72家）</div>
       <div class="summary-box">
@@ -1005,35 +1151,7 @@
       </div>
     </div>
 
-    <!-- 5. 感兴趣场景是否满足诉求 -->
-    <div class="section">
-      <div class="section-title general"><span class="icon">通用</span>通用运营 — 感兴趣场景是否满足诉求（感兴趣商户 42家）</div>
-      <div class="two-col buy-two-col">
-        <div>
-          <table class="data-table">
-            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-            <tbody>
-              <tr><td>是</td><td class="num">38</td><td class="num">90.5%</td></tr>
-              <tr><td>否</td><td class="num">3</td><td class="num">7.1%</td></tr>
-              <tr><td>未填写</td><td class="num">1</td><td class="num">2.4%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="buy-merchant-col">
-          <div class="merchant-list-box">
-            <div class="merchant-list-title">📌 满足诉求「否」的商户（3家）</div>
-            <div class="merchant-list">
-                <div class="merchant-item">广州普生正心堂健康药房有限公司</div>
-                <div class="merchant-item">新蛋商贸（上海）有限公司</div>
-                <div class="merchant-item">北京畅和讯达汽车救援技术开发有限公司</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. 增购意愿分布 -->
+    <!-- 7. 增购意愿分布 -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 增购意愿分布</div>
       <div class="two-col buy-two-col">
@@ -1057,7 +1175,7 @@
       </div>
     </div>
 
-    <!-- 7. 客户诉求 & 优化期望 -->
+    <!-- 8. 客户诉求 & 优化期望 -->
     <div class="section">
       <div class="section-title general"><span class="icon">通用</span>通用运营 — 客户诉求 &amp; 优化期望</div>
       <p class="field-note" style="margin-bottom:12px;">说明：以下为已推广且表示"感兴趣（是）"的商户中，填写了「客户诉求」或「优化期望」的明细（共 42 家）。数据来源于原始跟进表对应列。</p>
@@ -1231,6 +1349,14 @@ function switchCat(grp, idx) {
   const panels = document.querySelectorAll('[id^="cat-'+grp+'-"]');
   panels.forEach(p=> p.classList.remove('active'));
   const target = document.getElementById('cat-'+grp+'-'+idx);
+  if(target) target.classList.add('active');
+}
+function switchNoRep(grp, idx) {
+  const tabs = document.getElementById('noreptabs-' + grp).querySelectorAll('.cat-tab-btn');
+  tabs.forEach((t,i)=> t.classList.toggle('active', i===idx));
+  const panels = document.querySelectorAll('[id^="norep-'+grp+'-"]');
+  panels.forEach(p=> p.classList.remove('active'));
+  const target = document.getElementById('norep-'+grp+'-'+idx);
   if(target) target.classList.add('active');
 }
 </script>
