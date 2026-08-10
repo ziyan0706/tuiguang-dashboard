@@ -398,7 +398,7 @@
     </div>
   </div>
 
-        <!-- Tabs -->
+          <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">行业运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -547,18 +547,33 @@
       </div>
     </div>
 
-    <!-- 5. 场景是否满足诉求 -->
+    <!-- 5. 感兴趣场景是否满足诉求 -->
     <div class="section">
-      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 场景是否满足诉求（感兴趣商户 91家）</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广且表示"感兴趣（是）"的商户（91家），对其"感兴趣的场景是否满足诉求"的填写进行统计。</p>
-      <table class="data-table">
-        <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-        <tbody>
-          <tr><td>是</td><td class="num">41</td><td class="num">45.1%</td></tr>
-          <tr><td>否</td><td class="num">4</td><td class="num">4.4%</td></tr>
-          <tr><td>未填写</td><td class="num">46</td><td class="num">50.5%</td></tr>
-        </tbody>
-      </table>
+      <div class="section-title industry"><span class="icon">行业</span>行业运营部 — 感兴趣场景是否满足诉求（感兴趣商户 91家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">41</td><td class="num">45.1%</td></tr>
+              <tr><td>否</td><td class="num">4</td><td class="num">4.4%</td></tr>
+              <tr><td>未填写</td><td class="num">46</td><td class="num">50.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="buy-merchant-col">
+          <div class="merchant-list-box">
+            <div class="merchant-list-title">📌 满足诉求「否」的商户（4家）</div>
+            <div class="merchant-list">
+                <div class="merchant-item">资生堂丽源化妆品有限公司</div>
+                <div class="merchant-item">上海逸刻新零售网络科技有限公司</div>
+                <div class="merchant-item">苏州智尚信息技术有限公司</div>
+                <div class="merchant-item">福建紫色花语集团有限公司</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 6. 增购意愿分布 -->
@@ -567,10 +582,10 @@
       <div class="two-col buy-two-col">
         <div>
           <div class="interest-cards">
-            <div class="interest-card ic-yes"><div class="ic-value">7</div><div class="ic-label">有增购意愿</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">79</div><div class="ic-label">待定</div></div>
-            <div class="interest-card ic-no"><div class="ic-value">3</div><div class="ic-label">否</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">35</div><div class="ic-label">未填写</div></div>
+            <div class="interest-card ic-yes"><div class="ic-value">7</div><div class="ic-label">有增购意愿</div><div class="ic-pct">5.6%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">79</div><div class="ic-label">待定</div><div class="ic-pct">63.7%</div></div>
+            <div class="interest-card ic-no"><div class="ic-value">3</div><div class="ic-label">否</div><div class="ic-pct">2.4%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">35</div><div class="ic-label">未填写</div><div class="ic-pct">28.2%</div></div>
           </div>
           <p class="field-note" style="margin-top:8px;">另有 35 家商户未填写增购意愿。</p>
         </div>
@@ -750,18 +765,22 @@
       </div>
     </div>
 
-    <!-- 5. 场景是否满足诉求 -->
+    <!-- 5. 感兴趣场景是否满足诉求 -->
     <div class="section">
-      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 场景是否满足诉求（感兴趣商户 37家）</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广且表示"感兴趣（是）"的商户（37家），对其"感兴趣的场景是否满足诉求"的填写进行统计。</p>
-      <table class="data-table">
-        <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-        <tbody>
-          <tr><td>是</td><td class="num">26</td><td class="num">70.3%</td></tr>
-          <tr><td>否</td><td class="num">0</td><td class="num">0.0%</td></tr>
-          <tr><td>未填写</td><td class="num">11</td><td class="num">29.7%</td></tr>
-        </tbody>
-      </table>
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 感兴趣场景是否满足诉求（感兴趣商户 37家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">26</td><td class="num">70.3%</td></tr>
+              <tr><td>否</td><td class="num">0</td><td class="num">0.0%</td></tr>
+              <tr><td>未填写</td><td class="num">11</td><td class="num">29.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
     </div>
 
     <!-- 6. 增购意愿分布 -->
@@ -770,10 +789,10 @@
       <div class="two-col buy-two-col">
         <div>
           <div class="interest-cards">
-            <div class="interest-card ic-yes"><div class="ic-value">4</div><div class="ic-label">有增购意愿</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">9</div><div class="ic-label">待定</div></div>
-            <div class="interest-card ic-no"><div class="ic-value">12</div><div class="ic-label">否</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">324</div><div class="ic-label">未填写</div></div>
+            <div class="interest-card ic-yes"><div class="ic-value">4</div><div class="ic-label">有增购意愿</div><div class="ic-pct">1.1%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">9</div><div class="ic-label">待定</div><div class="ic-pct">2.6%</div></div>
+            <div class="interest-card ic-no"><div class="ic-value">12</div><div class="ic-label">否</div><div class="ic-pct">3.4%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">324</div><div class="ic-label">未填写</div><div class="ic-pct">92.8%</div></div>
           </div>
           <p class="field-note" style="margin-top:8px;">另有 324 家商户未填写增购意愿。</p>
         </div>
@@ -986,18 +1005,32 @@
       </div>
     </div>
 
-    <!-- 5. 场景是否满足诉求 -->
+    <!-- 5. 感兴趣场景是否满足诉求 -->
     <div class="section">
-      <div class="section-title general"><span class="icon">通用</span>通用运营 — 场景是否满足诉求（感兴趣商户 42家）</div>
-      <p class="field-note" style="margin-bottom:12px;">统计范围：已推广且表示"感兴趣（是）"的商户（42家），对其"感兴趣的场景是否满足诉求"的填写进行统计。</p>
-      <table class="data-table">
-        <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
-        <tbody>
-          <tr><td>是</td><td class="num">38</td><td class="num">90.5%</td></tr>
-          <tr><td>否</td><td class="num">3</td><td class="num">7.1%</td></tr>
-          <tr><td>未填写</td><td class="num">1</td><td class="num">2.4%</td></tr>
-        </tbody>
-      </table>
+      <div class="section-title general"><span class="icon">通用</span>通用运营 — 感兴趣场景是否满足诉求（感兴趣商户 42家）</div>
+      <div class="two-col buy-two-col">
+        <div>
+          <table class="data-table">
+            <thead><tr><th>是否满足诉求</th><th class="num">商户数</th><th class="num">占比</th></tr></thead>
+            <tbody>
+              <tr><td>是</td><td class="num">38</td><td class="num">90.5%</td></tr>
+              <tr><td>否</td><td class="num">3</td><td class="num">7.1%</td></tr>
+              <tr><td>未填写</td><td class="num">1</td><td class="num">2.4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="buy-merchant-col">
+          <div class="merchant-list-box">
+            <div class="merchant-list-title">📌 满足诉求「否」的商户（3家）</div>
+            <div class="merchant-list">
+                <div class="merchant-item">广州普生正心堂健康药房有限公司</div>
+                <div class="merchant-item">新蛋商贸（上海）有限公司</div>
+                <div class="merchant-item">北京畅和讯达汽车救援技术开发有限公司</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 6. 增购意愿分布 -->
@@ -1006,10 +1039,10 @@
       <div class="two-col buy-two-col">
         <div>
           <div class="interest-cards">
-            <div class="interest-card ic-yes"><div class="ic-value">1</div><div class="ic-label">有增购意愿</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">85</div><div class="ic-label">待定</div></div>
-            <div class="interest-card ic-no"><div class="ic-value">72</div><div class="ic-label">否</div></div>
-            <div class="interest-card ic-pending"><div class="ic-value">3</div><div class="ic-label">未填写</div></div>
+            <div class="interest-card ic-yes"><div class="ic-value">1</div><div class="ic-label">有增购意愿</div><div class="ic-pct">0.6%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">85</div><div class="ic-label">待定</div><div class="ic-pct">52.8%</div></div>
+            <div class="interest-card ic-no"><div class="ic-value">72</div><div class="ic-label">否</div><div class="ic-pct">44.7%</div></div>
+            <div class="interest-card ic-pending"><div class="ic-value">3</div><div class="ic-label">未填写</div><div class="ic-pct">1.9%</div></div>
           </div>
           <p class="field-note" style="margin-top:8px;">另有 3 家商户未填写增购意愿。</p>
         </div>
@@ -1176,6 +1209,7 @@
   .merchant-list-fl { list-style:none; margin:0; padding:0; }
   .merchant-list-fl li { padding:8px 12px; border-bottom:1px solid #f0f0f0; font-size:13.5px; color:#444; }
   .merchant-list-fl li strong { color:#222; margin-right:6px; }
+  .ic-pct { font-size:12px; color:#888; margin-top:4px; }
   .tab-content[id$="-smb"] .cat-tab-btn.active,
   .tab-content[id$="-smb"] .cat-tab-btn.active { background:#00b894; border-color:#00b894; }
   .tab-content[id$="-general"] .cat-tab-btn.active { background:#6c5ce7; border-color:#6c5ce7; }
