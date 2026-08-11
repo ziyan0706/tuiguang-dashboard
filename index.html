@@ -237,6 +237,7 @@
   .bar-fill.industry, .bar-fill.ind { background: linear-gradient(90deg, #e17055, #fab1a0); }
   .bar-fill.smb { background: linear-gradient(90deg, #00b894, #55efc4); }
   .bar-fill.general, .bar-fill.gen { background: linear-gradient(90deg, #6c5ce7, #a29bfe); }
+  .bar-fill.intscene { background: linear-gradient(90deg, #00b894, #55efc4); }
   .bar-fill.comparison, .bar-fill.cmp { background: linear-gradient(90deg, #667eea, #764ba2); }
   .bar-val { font-weight: 700; font-size: 13px; white-space: nowrap; min-width: 40px; text-align: right; }
 
@@ -445,7 +446,7 @@
     </div>
   </div>
 
-                                                      <!-- Tabs -->
+                                                        <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">KA运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -517,6 +518,29 @@
         <div class="interest-card ic-no"><div class="ic-value">22</div><div class="ic-label">不感兴趣（否）</div></div>
         <div class="interest-card ic-pending"><div class="ic-value">17</div><div class="ic-label">未填写</div></div>
       </div>
+    </div>
+
+    <!-- 3.5 商户感兴趣的场景统计 -->
+    <div class="section">
+      <div class="section-title industry"><span class="icon">KA</span>KA运营部 — 商户感兴趣的场景统计</div>
+      <p class="field-note">统计范围：93家感兴趣商户所反馈的具体感兴趣场景（多选）</p>
+      <table class="data-table">
+        <thead><tr><th>序号</th><th>感兴趣的场景</th><th class="num">商户数</th><th>分布</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>作图/视频能力</td><td class="num">40</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:100.0%"><span class="bar-val">40家</span></div></div></td></tr>
+          <tr><td class="num">2</td><td>月度经营报告</td><td class="num">35</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:87.5%"><span class="bar-val">35家</span></div></div></td></tr>
+          <tr><td class="num">3</td><td>商品定时上下架能力</td><td class="num">26</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:65.0%"><span class="bar-val">26家</span></div></div></td></tr>
+          <tr><td class="num">4</td><td>店铺装修</td><td class="num">20</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:50.0%"><span class="bar-val">20家</span></div></div></td></tr>
+          <tr><td class="num">5</td><td>导购线索运营使用跟进策略</td><td class="num">16</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:40.0%"><span class="bar-val">16家</span></div></div></td></tr>
+          <tr><td class="num">6</td><td>AI试衣</td><td class="num">10</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:25.0%"><span class="bar-val">10家</span></div></div></td></tr>
+          <tr><td class="num">7</td><td>商家文案内容素材生产</td><td class="num">8</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:20.0%"><span class="bar-val">8家</span></div></div></td></tr>
+          <tr><td class="num">8</td><td>其他</td><td class="num">7</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:17.5%"><span class="bar-val">7家</span></div></div></td></tr>
+          <tr><td class="num">9</td><td>移动端经营分析</td><td class="num">5</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:12.5%"><span class="bar-val">5家</span></div></div></td></tr>
+          <tr><td class="num">10</td><td>导购端ai文案创作</td><td class="num">3</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:7.5%"><span class="bar-val">3家</span></div></div></td></tr>
+          <tr><td class="num">11</td><td>图+文）</td><td class="num">3</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:7.5%"><span class="bar-val">3家</span></div></div></td></tr>
+          <tr><td class="num">12</td><td>faq知识库</td><td class="num">2</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:5.0%"><span class="bar-val">2家</span></div></div></td></tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- 4. 感兴趣场景是否满足诉求 -->
@@ -813,6 +837,25 @@
       </div>
     </div>
 
+    <!-- 3.5 商户感兴趣的场景统计 -->
+    <div class="section">
+      <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 商户感兴趣的场景统计</div>
+      <p class="field-note">统计范围：38家感兴趣商户所反馈的具体感兴趣场景（多选）</p>
+      <table class="data-table">
+        <thead><tr><th>序号</th><th>感兴趣的场景</th><th class="num">商户数</th><th>分布</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>月度经营报告</td><td class="num">15</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:100.0%"><span class="bar-val">15家</span></div></div></td></tr>
+          <tr><td class="num">2</td><td>faq知识库</td><td class="num">11</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:73.3%"><span class="bar-val">11家</span></div></div></td></tr>
+          <tr><td class="num">3</td><td>商品定时上下架能力</td><td class="num">9</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:60.0%"><span class="bar-val">9家</span></div></div></td></tr>
+          <tr><td class="num">4</td><td>店铺装修</td><td class="num">7</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:46.7%"><span class="bar-val">7家</span></div></div></td></tr>
+          <tr><td class="num">5</td><td>移动端经营分析</td><td class="num">5</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:33.3%"><span class="bar-val">5家</span></div></div></td></tr>
+          <tr><td class="num">6</td><td>商家文案内容素材生产</td><td class="num">5</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:33.3%"><span class="bar-val">5家</span></div></div></td></tr>
+          <tr><td class="num">7</td><td>作图/视频能力</td><td class="num">5</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:33.3%"><span class="bar-val">5家</span></div></div></td></tr>
+          <tr><td class="num">8</td><td>其他</td><td class="num">1</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:6.7%"><span class="bar-val">1家</span></div></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <!-- 4. 感兴趣场景是否满足诉求 -->
     <div class="section">
       <div class="section-title smb"><span class="icon">SMB</span>SMB运营部 — 感兴趣场景是否满足诉求（感兴趣商户 38家）</div>
@@ -1066,6 +1109,23 @@
         <div class="interest-card ic-no"><div class="ic-value">72</div><div class="ic-label">不感兴趣（否）</div></div>
         <div class="interest-card ic-pending"><div class="ic-value">47</div><div class="ic-label">未填写</div></div>
       </div>
+    </div>
+
+    <!-- 3.5 商户感兴趣的场景统计 -->
+    <div class="section">
+      <div class="section-title general"><span class="icon">通用</span>通用运营部 — 商户感兴趣的场景统计</div>
+      <p class="field-note">统计范围：42家感兴趣商户所反馈的具体感兴趣场景（多选）</p>
+      <table class="data-table">
+        <thead><tr><th>序号</th><th>感兴趣的场景</th><th class="num">商户数</th><th>分布</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>移动端经营分析</td><td class="num">20</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:100.0%"><span class="bar-val">20家</span></div></div></td></tr>
+          <tr><td class="num">2</td><td>作图/视频能力</td><td class="num">11</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:55.0%"><span class="bar-val">11家</span></div></div></td></tr>
+          <tr><td class="num">3</td><td>商家文案内容素材生产</td><td class="num">8</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:40.0%"><span class="bar-val">8家</span></div></div></td></tr>
+          <tr><td class="num">4</td><td>店铺装修</td><td class="num">7</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:35.0%"><span class="bar-val">7家</span></div></div></td></tr>
+          <tr><td class="num">5</td><td>商品定时上下架能力</td><td class="num">4</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:20.0%"><span class="bar-val">4家</span></div></div></td></tr>
+          <tr><td class="num">6</td><td>月度经营报告</td><td class="num">1</td><td><div class="bar-track"><div class="bar-fill intscene" style="width:5.0%"><span class="bar-val">1家</span></div></div></td></tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- 4. 感兴趣场景是否满足诉求 -->
