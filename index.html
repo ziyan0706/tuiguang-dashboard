@@ -43,7 +43,8 @@
     transition: transform 0.2s;
   }
   .overview-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-  .overview-card .label { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 8px; line-height: 1.4; }
+  .overview-card .label { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 4px; line-height: 1.4; }
+  .overview-card .plan-count-label { font-size: 12.5px; color: #999; margin-bottom: 8px; }
   .overview-card .value-row { white-space: nowrap; }
   .overview-card .value { font-size: 36px; font-weight: 700; color: #667eea; }
   .overview-card .unit { font-size: 16px; color: #666; margin-left: 2px; font-weight: 600; }
@@ -350,22 +351,26 @@
   <!-- Overview Cards -->
   <div class="overview-grid">
     <div class="overview-card">
-      <div class="label">三部门合计<br>计划推广商户总数</div>
+      <div class="label">三部门合计</div>
+      <div class="plan-count-label">计划推广商户数</div>
       <div class="value-row"><span class="value">2,455</span><span class="unit">个</span></div>
       <div class="meta-line">行业380 · SMB 1,914 · 通用161</div>
     </div>
     <div class="overview-card industry">
       <div class="label">KA运营部</div>
+      <div class="plan-count-label">计划推广商户数 380</div>
       <div class="value-row"><span class="value">132</span><span class="unit">个</span></div>
-      <div class="meta-line">覆盖率 <strong>34.7%</strong>（380个计划中）</div>
+      <div class="meta-line">覆盖率 <strong>34.7%</strong></div>
     </div>
     <div class="overview-card smb">
       <div class="label">SMB运营部</div>
+      <div class="plan-count-label">计划推广商户数 1,914</div>
       <div class="value-row"><span class="value">352</span><span class="unit">个</span></div>
-      <div class="meta-line">覆盖率 <strong>18.4%</strong>（1,914个计划中）</div>
+      <div class="meta-line">覆盖率 <strong>18.4%</strong></div>
     </div>
     <div class="overview-card general">
       <div class="label">通用运营部</div>
+      <div class="plan-count-label">计划推广商户数 待提供</div>
       <div class="value-row"><span class="value" style="color:#e74c3c;">待提供</span></div>
       <div class="meta-line">已推广 <strong>161</strong> 个<span class="quality-warn" title="⚠ 因通用运营部未提供计划推广商户总数，覆盖率暂无法计算">!</span></div>
       <div class="card-warn-note"><span class="quality-warn" title="⚠ 因通用运营部未提供计划推广商户总数，覆盖率错误">!</span>通用运营部未提供「计划推广商户总数」，覆盖率提供后计算；且其「不感兴趣」72家中55家实为"客户没时间体验/待反馈"等沟通进度，数据质量存疑，建议复核。</div>
