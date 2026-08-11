@@ -345,7 +345,16 @@
   <div class="header">
     <h1>星元推广计划分析报告</h1>
     <div class="subtitle">KA运营部 · SMB运营部 · 通用运营部 — 推广漏斗全景</div>
-    <div class="date">数据更新日期：2026-08-10</div>
+    <div class="date" id="update-date">数据更新日期：加载中…</div>
+    <script>
+      (function(){
+        var d = new Date();
+        var y = d.getFullYear();
+        var m = String(d.getMonth()+1).padStart(2,'0');
+        var day = String(d.getDate()).padStart(2,'0');
+        document.getElementById('update-date').textContent = '数据更新日期：' + y + '-' + m + '-' + day;
+      })();
+    </script>
   </div>
 
   <!-- Overview Cards -->
