@@ -451,7 +451,7 @@
     </div>
   </div>
 
-                                                                  <!-- Tabs -->
+                                                                    <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">KA运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -1539,12 +1539,12 @@
   .rep-merchant-table td { font-size:13px; padding:7px 10px; vertical-align:middle; border-bottom:1px solid #f0f0f0; }
   .rep-merchant-table td:first-child { font-weight:600; color:#333; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:160px; }
   .scene-cell { font-size:12.5px; color:#555; line-height:1.6; word-break:break-all; }
-  /* 商户感兴趣场景统计表：序号|场景名(撑满)|商户数(紧贴)|进度条(固定) */
-  .intscenes-table { width:100%; table-layout:fixed; border-collapse:collapse; }
-  .intscenes-table .idx-col { width:36px; text-align:center; font-size:13px; font-weight:600; color:#888; padding:8px 2px; }
+  /* 商户感兴趣场景统计表：序号|场景名(撑满)|商户数(居中偏左)|进度条(自适应) */
+  .intscenes-table { width:100%; border-collapse:collapse; }
+  .intscenes-table .idx-col { width:38px; text-align:center; font-size:13px; font-weight:600; color:#888; padding:8px 2px; }
   .intscenes-table .scene-name-cell { font-size:13.5px; padding:8px 12px; }
-  .intscenes-table .num-col { width:52px; text-align:right; font-size:13px; padding:8px 6px 8px 0; }
-  .intscenes-table .bar-col { width:200px; padding:6px 2px; }
+  .intscenes-table .num-col { width:60px; text-align:center; font-size:13px; padding:8px 6px; }
+  .intscenes-table .bar-col { min-width:100px; padding:6px 2px; }
   @media(max-width:768px){ .rep-three-col { grid-template-columns: 1fr; } }
 </style>
 
