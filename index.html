@@ -446,7 +446,7 @@
     </div>
   </div>
 
-                                                              <!-- Tabs -->
+                                                                <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">KA运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -1525,8 +1525,8 @@
   .tab-content[id$="-compare"] .cat-tab-btn.active { background:#667eea; border-color:#667eea; }
   .quality-alert { background:#fff5f5; border:1px solid #f0c5c5; border-left:4px solid #e74c3c; color:#a94442; border-radius:8px; padding:12px 16px; margin:0 0 14px; font-size:13.5px; line-height:1.7; }
   .quality-alert strong { color:#c0392b; }
-  /* 增购意愿分布：三列平分整行（左表 | 商户名 | 场景） */
-  .rep-three-col { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 20px; align-items: start; }
+  /* 增购意愿分布：左表固定 + 右侧商户名/场景表铺满整行（仅两列，无空白） */
+  .rep-three-col { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 20px; align-items: start; width:100%; }
   .rep-table-col { min-width: 0; }
   .rep-merchants-col { min-width: 0; }
   .rep-merchant-table { width:100%; margin:0; table-layout:auto; border-collapse:collapse; }
@@ -1537,7 +1537,7 @@
   /* 商户感兴趣场景统计表：4列均匀分配 */
   .intscenes-table { width:100%; table-layout:auto; border-collapse:collapse; }
   .intscenes-table .idx-col { width:36px; text-align:center; font-size:13px; font-weight:600; color:#888; padding:8px 2px; }
-  .intscenes-table .num-col { width:50px; text-align:right; font-size:13px; padding:8px 6px; }
+  .intscenes-table .num-col { width:44px; text-align:right; font-size:13px; padding:8px 3px 8px 5px; }
   .intscenes-table .bar-col { min-width:120px; max-width:180px; padding:6px 2px; }
   .intscenes-table .scene-name-cell { font-size:13.5px; padding:8px 10px; }
   @media(max-width:768px){ .rep-three-col { grid-template-columns: 1fr; } }
