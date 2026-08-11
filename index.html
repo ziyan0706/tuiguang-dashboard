@@ -285,7 +285,23 @@
   .merchant-list-box { background: #fef9f3; border-radius: 10px; padding: 16px; border: 1px solid #f0e0c8; height: 100%; }
   .merchant-list-title { font-size: 13px; font-weight: 600; color: #e17055; margin-bottom: 10px; }
   .merchant-list { display: flex; flex-direction: column; gap: 6px; }
-  .merchant-item { font-size: 13px; color: #555; padding: 5px 8px; background: #fff; border-radius: 6px; border: 1px solid #eee; }
+  .merchant-item { font-size: 13px; color: #555; padding: 5px 8px; background: #fff; border-radius: 6px; border: 1px solid #eee; position: relative; cursor: default; }
+  .merchant-item[data-scenes]:hover::after {
+    content: attr(data-scenes);
+    position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+    margin-left: 10px;
+    padding: 8px 12px; background: #333; color: #fff; font-size: 12px;
+    border-radius: 6px; white-space: nowrap; z-index: 100;
+    pointer-events: none; line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .merchant-item[data-scenes]:hover::before {
+    content: '';
+    position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+    margin-left: -6px;
+    border: 6px solid transparent; border-right-color: #333;
+    pointer-events: none; z-index: 101;
+  }
   /* 数据加载中 过渡页（公网访问偶慢时先行展示） */
   #loading-overlay {
     position: fixed; inset: 0; z-index: 9999;
@@ -429,7 +445,7 @@
     </div>
   </div>
 
-                                                    <!-- Tabs -->
+                                                      <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">KA运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -629,13 +645,13 @@
           <div class="merchant-list-box">
             <div class="merchant-list-title">📌 增购意愿「是」的商户（7家）</div>
             <div class="merchant-list">
-                <div class="merchant-item">特步儿童</div>
-                <div class="merchant-item">361度儿童</div>
-                <div class="merchant-item">哥伦比亚</div>
-                <div class="merchant-item">高仪</div>
-                <div class="merchant-item">松赞文旅</div>
-                <div class="merchant-item">巴拉巴拉</div>
-                <div class="merchant-item">中和</div>
+                <div class="merchant-item" data-scenes="导购线索运营使用跟进策略,AI试衣" title="导购线索运营使用跟进策略,AI试衣">特步儿童</div>
+                <div class="merchant-item" data-scenes="导购线索运营使用跟进策略,作图/视频能力	,AI试衣" title="导购线索运营使用跟进策略,作图/视频能力	,AI试衣">361度儿童</div>
+                <div class="merchant-item" data-scenes="导购线索运营使用跟进策略,AI试衣" title="导购线索运营使用跟进策略,AI试衣">哥伦比亚</div>
+                <div class="merchant-item" data-scenes="作图/视频能力" title="作图/视频能力">高仪</div>
+                <div class="merchant-item" data-scenes="作图/视频能力" title="作图/视频能力">松赞文旅</div>
+                <div class="merchant-item" data-scenes="导购线索运营使用跟进策略,商家文案内容素材生产" title="导购线索运营使用跟进策略,商家文案内容素材生产">巴拉巴拉</div>
+                <div class="merchant-item" data-scenes="月度经营报告	,作图/视频能力	,导购端ai文案创作（朋友圈素材、小红书素材，图+文）" title="月度经营报告	,作图/视频能力	,导购端ai文案创作（朋友圈素材、小红书素材，图+文）">中和</div>
             </div>
           </div>
         </div>
@@ -889,10 +905,10 @@
           <div class="merchant-list-box">
             <div class="merchant-list-title">📌 增购意愿「是」的商户（4家）</div>
             <div class="merchant-list">
-                <div class="merchant-item">未使用微商城051602</div>
-                <div class="merchant-item">Allume-Feu 阿丽茉 官方商城</div>
-                <div class="merchant-item">xVESSEL</div>
-                <div class="merchant-item">DEALER STREAK</div>
+                <div class="merchant-item" data-scenes="商品定时上下架能力（831扩充选择商品数量）,月度经营报告" title="商品定时上下架能力（831扩充选择商品数量）,月度经营报告">未使用微商城051602</div>
+                <div class="merchant-item" data-scenes="商品定时上下架能力（831扩充选择商品数量）,月度经营报告" title="商品定时上下架能力（831扩充选择商品数量）,月度经营报告">Allume-Feu 阿丽茉 官方商城</div>
+                <div class="merchant-item" data-scenes="商品定时上下架能力（831扩充选择商品数量）,月度经营报告" title="商品定时上下架能力（831扩充选择商品数量）,月度经营报告">xVESSEL</div>
+                <div class="merchant-item" data-scenes="商品定时上下架能力（831扩充选择商品数量）,月度经营报告" title="商品定时上下架能力（831扩充选择商品数量）,月度经营报告">DEALER STREAK</div>
             </div>
           </div>
         </div>
@@ -1216,7 +1232,7 @@
           <div class="merchant-list-box">
             <div class="merchant-list-title">📌 增购意愿「是」的商户（1家）</div>
             <div class="merchant-list">
-                <div class="merchant-item">北京慈铭守人企业管理有限公司</div>
+                <div class="merchant-item" data-scenes="移动端经营分析（适用角色：加盟商老板、区经、店长）" title="移动端经营分析（适用角色：加盟商老板、区经、店长）">北京慈铭守人企业管理有限公司</div>
             </div>
           </div>
         </div>
