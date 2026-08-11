@@ -26,6 +26,7 @@
   .header h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
   .header .subtitle { font-size: 16px; opacity: 0.9; }
   .header .date { font-size: 14px; opacity: 0.7; margin-top: 16px; }
+  .header .date-note { font-size: 12px; opacity: 0.5; margin-top: 4px; }
 
   /* Overview Cards */
   .overview-grid {
@@ -345,14 +346,17 @@
   <div class="header">
     <h1>星元推广计划分析报告</h1>
     <div class="subtitle">KA运营部 · SMB运营部 · 通用运营部 — 推广漏斗全景</div>
-    <div class="date" id="update-date">数据更新日期：加载中…</div>
+    <div class="date" id="update-date">数据更新时间：加载中…</div>
+    <div class="date date-note">每日固定更新时间：20:15</div>
     <script>
       (function(){
         var d = new Date();
         var y = d.getFullYear();
         var m = String(d.getMonth()+1).padStart(2,'0');
         var day = String(d.getDate()).padStart(2,'0');
-        document.getElementById('update-date').textContent = '数据更新日期：' + y + '-' + m + '-' + day;
+        var h = String(d.getHours()).padStart(2,'0');
+        var min = String(d.getMinutes()).padStart(2,'0');
+        document.getElementById('update-date').textContent = '数据更新时间：' + y + '-' + m + '-' + day + ' ' + h + ':' + min;
       })();
     </script>
   </div>
@@ -459,7 +463,7 @@
     </div>
   </div>
 
-                                                                                      <!-- Tabs -->
+                                                                                        <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('industry')">KA运营部</button>
     <button class="tab-btn" onclick="switchTab('smb')">SMB运营部</button>
@@ -517,7 +521,16 @@
           <tr><td class="num">8</td><td><div class="bar-cell">移动端经营分析<div class="bar-track"><div class="bar-fill industry" style="width:17.0%"></div></div></div></td><td class="num">19</td><td class="num">11.8%</td></tr>
           <tr><td class="num">9</td><td><div class="bar-cell">faq知识库<div class="bar-track"><div class="bar-fill industry" style="width:13.4%"></div></div></div></td><td class="num">15</td><td class="num">9.3%</td></tr>
           <tr><td class="num">10</td><td><div class="bar-cell">导购端ai文案创作<div class="bar-track"><div class="bar-fill industry" style="width:12.5%"></div></div></div></td><td class="num">14</td><td class="num">8.7%</td></tr>
-          <tr><td class="num">11</td><td><div class="bar-cell">其他<div class="bar-track"><div class="bar-fill industry" style="width:10.7%"></div></div></div></td><td class="num">12</td><td class="num">7.5%</td></tr>
+          <tr><td class="num">11</td><td><div class="bar-cell"><span class="scene-tooltip-wrap">其他<div class="scene-tooltip"><div class="scene-tooltip-title">其他场景描述（9条）</div><ul><li>• 批量更新商品信息参数</li><li>• 促销活动搭建</li><li>• 1、低于安全库存，门店自己又确定有货的，需要临时开启指定门店的负库存（商城 -门店设置-指定门店勾选“支持负库存下单”，等导购操作完成代课下单，再取消勾选
+
+2、要求上架，需要检查商品是够开启上架，是否配置了“线下+线上”，分配组织里面是否有该门店，没有的话进行分配操作
+
+3、改地址改手机号登，是否可直接AI操作
+
+4、补优惠券：确认是否历史的确有对应券的使用记录，如有，按要求进行补发指定券</li><li>• 组合商品创建
+订单活动商品分析
+数据报告</li><li>• 定时修改商品标题功能
+商家日常设置秒杀活动存在凌晨开始的场景，需要给商品批量修改标题，目前是人工在凌晨操作修改，故需定时修改功能，代替人工。</li><li>• 促销活动配置，活动海报生成</li><li>• 智能客服</li><li>• 商家周未到货后定价，因此运营需要周六改价，当前手机端不支持组合商品改价，用星元可以实现</li><li>• 促销活动配置</li></ul></div></span><div class="bar-track"><div class="bar-fill industry" style="width:10.7%"></div></div></div></td><td class="num">12</td><td class="num">7.5%</td></tr>
         </tbody>
       </table>
     </div>
@@ -814,7 +827,7 @@
           <tr><td class="num">6</td><td><div class="bar-cell">商家文案内容素材生产<div class="bar-track"><div class="bar-fill smb" style="width:57.3%"></div></div></div></td><td class="num">209</td><td class="num">35.8%</td></tr>
           <tr><td class="num">7</td><td><div class="bar-cell">移动端经营分析<div class="bar-track"><div class="bar-fill smb" style="width:20.5%"></div></div></div></td><td class="num">75</td><td class="num">12.9%</td></tr>
           <tr><td class="num">8</td><td><div class="bar-cell">AI试衣<div class="bar-track"><div class="bar-fill smb" style="width:1.4%"></div></div></div></td><td class="num">5</td><td class="num">0.9%</td></tr>
-          <tr><td class="num">9</td><td><div class="bar-cell">其他<div class="bar-track"><div class="bar-fill smb" style="width:0.8%"></div></div></div></td><td class="num">3</td><td class="num">0.5%</td></tr>
+          <tr><td class="num">9</td><td><div class="bar-cell"><span class="scene-tooltip-wrap">其他<div class="scene-tooltip"><div class="scene-tooltip-title">其他场景描述（3条）</div><ul><li>• 客户需要针对商城内已经支付的虚拟商品订单执行自动发货能力</li><li>• 订单管理类：售后订单已完成，但用户资产并未完全退回账户，情况排查</li><li>• 需要AI按照周期维度拉取客户访问数据，并以表格形式导出</li></ul></div></span><div class="bar-track"><div class="bar-fill smb" style="width:0.8%"></div></div></div></td><td class="num">3</td><td class="num">0.5%</td></tr>
         </tbody>
       </table>
     </div>
@@ -1516,6 +1529,16 @@
   .intscenes-table .scene-name-cell { width:42%; font-size:13.5px; padding:8px 12px; }
   .intscenes-table .num-col { width:13%; text-align:center; font-size:13px; padding:8px 6px; }
   .intscenes-table .bar-col { width:40%; padding:6px 2px; }
+  /* 其他场景悬浮提示 */
+  .scene-tooltip-wrap { position: relative; display: inline-block; cursor: help; border-bottom: 1px dashed #999; }
+  .scene-tooltip-wrap::after { content: "📋"; font-size: 11px; margin-left: 4px; opacity: 0.6; vertical-align: middle; }
+  .scene-tooltip { position: absolute; bottom: calc(100% + 8px); left: 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 10px 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); z-index: 100; display: none; min-width: 240px; max-width: 400px; }
+  .scene-tooltip-wrap:hover .scene-tooltip { display: block; }
+  .scene-tooltip::after { content: ""; position: absolute; top: 100%; left: 20px; border-width: 6px; border-style: solid; border-color: #fff transparent transparent transparent; }
+  .scene-tooltip-title { font-size: 12px; font-weight: 700; color: #667eea; margin-bottom: 6px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  .scene-tooltip ul { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow-y: auto; }
+  .scene-tooltip li { font-size: 12.5px; color: #444; padding: 4px 0; border-bottom: 1px solid #f5f5f5; line-height: 1.5; }
+  .scene-tooltip li:last-child { border-bottom: none; }
   @media(max-width:768px){ .rep-three-col { grid-template-columns: 1fr; } }
 </style>
 
